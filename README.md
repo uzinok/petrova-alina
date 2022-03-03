@@ -28,3 +28,5 @@
 * [устнаовить node.js](https://nodejs.org/) используется пакет npm
 * [глобально установить gulp](https://gulpjs.com/) для работы команд gulp
 * [глобально установить browser-sync](https://browsersync.io/) для работы виртуального сервера
+
+<!-- https://www.npmjs.com/package/gulp-gh-pages -->
