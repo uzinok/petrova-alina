@@ -1,0 +1,46 @@
+{
+	"name": "bolt",
+	"version": "4.0.0",
+	"description": "html less babel",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/uzinok/bolt.git"
+	},
+	"author": "Зиновьев Александр",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/uzinok/bolt/issues"
+	},
+	"homepage": "https://github.com/uzinok/bolt#readme",
+	"devDependencies": {
+		"@babel/core": "^7.16.5",
+		"@babel/preset-env": "^7.16.5",
+		"autoprefixer": "^10.4.2",
+		"browser-sync": "^2.27.7",
+		"del": "^6.0.0",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-less": "^5.0.0",
+		"gulp-libsquoosh": "^1.0.12",
+		"gulp-minify": "^3.1.0",
+		"gulp-notify": "^4.0.0",
+		"gulp-nunjucks": "^5.1.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^9.0.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-svg-sprite": "^1.5.0",
+		"gulp-svgmin": "^4.1.0",
+		"gulp-ttf2woff": "^1.1.1",
+		"gulp-ttf2woff2": "^4.0.1",
+		"postcss-csso": "^6.0.0",
+		"postcss-import": "^14.0.2",
+		"postcss-less": "^6.0.0",
+		"postcss-media-minmax": "^5.0.0",
+		"postcss-url": "^10.1.3"
+	}
+}

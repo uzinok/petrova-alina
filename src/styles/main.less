@@ -1,0 +1,41 @@
+@import './layout/grid.less';
+@import './layout/scaffolding.less';
+
+body {
+	margin: 0;
+	background-color: rgb(222, 215, 250);
+	border: 3px solid #33e241;
+
+	& img {
+		display: block;
+		border-bottom: 1px solid green;
+	}
+}
+
+@media (min-width: 990px) {
+	body {
+		background-color: aliceblue;
+	}
+}
+
+@media (min-width: 990px) {
+	p {
+		background-color: aliceblue;
+	}
+}
+
+i,
+b,
+span {
+	display: inline-block;
+}
+
+@media (min-width: 990px) {
+	img {
+		border-radius: 5px;
+
+		&:hover {
+			border-radius: 2px;
+		}
+	}
+}
