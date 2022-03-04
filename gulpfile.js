@@ -125,10 +125,6 @@ function styles() {
 			csso(),
 			autoprefixer(),
 		]))
-		.pipe(rename({
-			basename: 'main',
-			suffix: '.min'
-		}))
 		.pipe(dest(paths.styles.dest, {
 			sourcemaps: "."
 		}))
