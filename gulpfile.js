@@ -287,7 +287,7 @@ exports.fonts = fonts;
 // deploy
 const ghPages = require('gulp-gh-pages');
 function deploy() {
-	return src('./dist/**/*')
+	return src('./dest/**/*')
     .pipe(ghPages());
 }
 exports.deploy = deploy;
