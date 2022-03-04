@@ -1,25 +1,25 @@
 html {
+	height: 100%;
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
-	height: 100%;
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 	margin: 0;
 	font-weight: 500;
 	font-size: 13px;
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	color: var(--color-text);
 	background-color: var(--bg-body);
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
 }
 
 abbr[title] {
-	border-bottom: none;
 	text-decoration: underline;
 	text-decoration: underline dotted;
+	border-bottom: none;
 }
 
 b,
@@ -40,10 +40,10 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit;
+	margin: 0;
 	font-size: 100%;
 	line-height: 1.15;
-	margin: 0;
+	font-family: inherit;
 }
 
 button,
@@ -62,8 +62,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-	border-style: none;
 	padding: 0;
+	border-style: none;
 }
 
 button:-moz-focusring,
@@ -78,11 +78,11 @@ fieldset {
 }
 
 legend {
-	box-sizing: border-box;
-	color: inherit;
 	display: table;
+	box-sizing: border-box;
 	max-width: 100%;
 	padding: 0;
+	color: inherit;
 	white-space: normal;
 }
 
@@ -92,14 +92,14 @@ legend {
 }
 
 [type="search"] {
-	-webkit-appearance: textfield;
 	outline-offset: -2px;
+	-webkit-appearance: textfield;
 	-webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
-	-webkit-appearance: button;
 	font: inherit;
+	-webkit-appearance: button;
 }
 
 details {
@@ -182,11 +182,11 @@ summary {
 
 
 .col {
-	padding-left: 30px;
 	padding-right: 30px;
+	padding-left: 30px;
 
 	@media (min-width: @min-md) {
-		padding-left: 40px;
 		padding-right: 40px;
+		padding-left: 40px;
 	}
 }
