@@ -283,3 +283,11 @@ exports.optiImg = optiImg;
 exports.sprite = sprite;
 // fonts
 exports.fonts = fonts;
+
+// deploy
+const ghPages = require('gulp-gh-pages');
+function deploy() {
+	return src('./dist/**/*')
+    .pipe(ghPages());
+}
+exports.deploy = deploy;
