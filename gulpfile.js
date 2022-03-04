@@ -20,7 +20,7 @@ const notify = require('gulp-notify');
 const less = require('gulp-less');
 // const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('autoprefixer');
-// const gcmq = require('gulp-group-css-media-queries');
+const gcmq = require('gulp-group-css-media-queries');
 
 const postcss = require('gulp-postcss');
 const postLess = require('postcss-less');
@@ -119,6 +119,7 @@ function styles() {
 			errorHandler: onError
 		}))
 		.pipe(less())
+		.pipe(gcmq())
 		.pipe(postcss([
 			postMediaMinMax(),
 			csso(),
