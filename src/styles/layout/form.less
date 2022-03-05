@@ -120,8 +120,8 @@ select.form__control {
 }
 
 .form__select-icon select {
-	padding-left: 60px;
 	padding-right: 40px;
+	padding-left: 60px;
 }
 
 .form__select-icon option {
@@ -135,56 +135,115 @@ select.form__control {
 	left: 16px;
 	width: 30px;
 	height: 24px;
+	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	background-repeat: no-repeat;
 }
 
 .form__select-icon[data-icon='am']::before {
 	background-image: url(../../img/flags/am.svg);
 }
+
 .form__select-icon[data-icon='az']::before {
 	background-image: url(../../img/flags/az.svg);
 }
+
 .form__select-icon[data-icon='by']::before {
 	background-image: url(../../img/flags/by.svg);
 }
+
 .form__select-icon[data-icon='ba']::before {
 	background-image: url(../../img/flags/ba.svg);
 }
+
 .form__select-icon[data-icon='ee']::before {
 	background-image: url(../../img/flags/ee.svg);
 }
+
 .form__select-icon[data-icon='ge']::before {
 	background-image: url(../../img/flags/ge.svg);
 }
+
 .form__select-icon[data-icon='kz']::before {
 	background-image: url(../../img/flags/kz.svg);
 }
+
 .form__select-icon[data-icon='kg']::before {
 	background-image: url(../../img/flags/kg.svg);
 }
+
 .form__select-icon[data-icon='lv']::before {
 	background-image: url(../../img/flags/lv.svg);
 }
+
 .form__select-icon[data-icon='lt']::before {
 	background-image: url(../../img/flags/lt.svg);
 }
+
 .form__select-icon[data-icon='md']::before {
 	background-image: url(../../img/flags/md.svg);
 }
+
 .form__select-icon[data-icon='ru']::before {
 	background-image: url(../../img/flags/ru.svg);
 }
+
 .form__select-icon[data-icon='tj']::before {
 	background-image: url(../../img/flags/tj.svg);
 }
+
 .form__select-icon[data-icon='tm']::before {
 	background-image: url(../../img/flags/tm.svg);
 }
+
 .form__select-icon[data-icon='ua']::before {
 	background-image: url(../../img/flags/ua.svg);
 }
+
 .form__select-icon[data-icon='uz']::before {
 	background-image: url(../../img/flags/uz.svg);
+}
+
+.form__password {
+	position: relative;
+
+	& input {
+		padding-right: 50px;
+	}
+}
+
+.form__password:focus-within input,
+.form__password-toggle:hover ~ input {
+	box-shadow: 0px 4px 20px 0px var(--color-light-text);
+}
+
+.form__password-toggle {
+	position: absolute;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border: 0;
+	box-shadow: none;
+	cursor: pointer;
+}
+
+.form__password-toggle {
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 24px;
+		height: 24px;
+		background-image: url(../../img/form/password-hide.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		transform: translate(-50%, -50%);
+	}
+
+	&--visible::before {
+		background-image: url(../../img/form/password-visible.svg);
+	}
 }
