@@ -21,15 +21,20 @@
 		<hr>
 		<button class="btn btn--text-small">Вернуть как было</button>
 		<hr>
+		<button class="btn btn--text-small" disabled>Вернуть как было</button>
+		<hr>
 		<a href="#" class="btn btn--success">Сменить пароль</a>
 		<hr>
 		<button class="btn btn--success">Сменить пароль</button>
+		<hr>
+		<button class="btn btn--success" disabled>Сменить пароль</button>
 
 		<form action="#" method="get" class="form">
 			<hr>
 			<fieldset class="form__fieldset">
+				<legend class="form__legend">Контакты</legend>
 
-				<label class="form__label" for="select">Пароль</label>
+				<label class="form__label" for="select">Страна</label>
 				<div class="form__select-icon--js">
 					<select name="country" id="select" class="form__control">
 						<option value="RU">Российская Федерация</option>
@@ -50,8 +55,6 @@
 						<option value="UZ">Республика Узбекистан</option>
 					</select>
 				</div>
-
-				<legend class="form__legend">Контакты</legend>
 
 				<div class="form__label">Пол</div>
 				<div class="form__radio-wrap">
@@ -77,12 +80,85 @@
 
 				<label class="form__label" for="id1">Пароль</label>
 				<div class="form__password form__password--js">
-					<button type="button" class="form__password-toggle" style="display: none;"></button>
+					<button type="button" class="form__password-toggle" style="display: none;" tabindex="-1"></button>
 					<input class="form__control" id="id3" type="password" value="name" required>
 				</div>
 
 			</fieldset>
 
+			<fieldset class="form__fieldset">
+				<legend class="form__legend">Уведомления</legend>
+				<div class="form__checkbox-wrap">
+
+					<label for="subscription" class="form__checkbox-label">
+						<input type="checkbox" id="subscription" name="subscription" class="visually-hidden form__checkbox" checked>
+						<span class="form__checkbox-view"></span>
+						Хочу получать рассылки по почте
+					</label>
+
+					<p class="form__notes">Обновление питания, тренировок, ответы в чатах, промокоды, акции и скидки. Только важное и полезное</p>
+				</div>
+			</fieldset>
+
+			<fieldset class="form__fieldset">
+				<legend class="form__legend">отключенные элементы</legend>
+
+				<label class="form__label" for="select1">Страна</label>
+				<div class="form__select-icon--js">
+					<select name="country" id="select1" class="form__control" disabled>
+						<option value="RU">Российская Федерация</option>
+						<option value="AM">Армения</option>
+						<option value="AZ">Республика Азербайджан</option>
+						<option value="BY">Республика Беларусь</option>
+						<option value="BA">Босния и Герцеговина</option>
+						<option value="EE">Эстонская Республика</option>
+						<option value="GE">Грузия</option>
+						<option value="KZ">Республика Казахстан</option>
+						<option value="KG">Киргизская Республика</option>
+						<option value="LV">Латвийская Республика</option>
+						<option value="LT">Литовская Республика</option>
+						<option value="MD">Республика Молдова</option>
+						<option value="TJ">Республика Таджикистан</option>
+						<option value="TM">Туркменистан</option>
+						<option value="UA">Украина</option>
+						<option value="UZ">Республика Узбекистан</option>
+					</select>
+				</div>
+
+				<div class="form__label">Пол</div>
+				<div class="form__radio-wrap">
+
+					<input id="female1" class="visually-hidden form__radio" type="radio" name="gender1" value="female" checked disabled>
+					<label for="female1" class="form__radio-label">Женский</label>
+
+					<input id="male1" class="visually-hidden form__radio" type="radio" name="gender1" value="male" disabled>
+					<label for="male1" class="form__radio-label">Мужской</label>
+
+					<input id="other1" class="visually-hidden form__radio" type="radio" name="gender1" value="other" disabled>
+					<label for="other1" class="form__radio-label">Иной</label>
+
+				</div>
+
+				<div class="form__grid">
+					<label class="form__label" for="id1">Логин</label>
+					<input class="form__control" id="id1" type="text" value="name" required disabled>
+
+					<label class="form__label" for="id11">Почта</label>
+					<input class="form__control" id="id21" type="email" placeholder="some@mail.ru" required disabled>
+				</div>
+
+				<div class="form__checkbox-wrap">
+
+					<label for="subscription1" class="form__checkbox-label">
+						<input type="checkbox" id="subscription1" name="subscription1" class="visually-hidden form__checkbox" checked disabled>
+						<span class="form__checkbox-view"></span>
+						Хочу получать рассылки по почте
+					</label>
+
+					<p class="form__notes">Обновление питания, тренировок, ответы в чатах, промокоды, акции и скидки. Только важное и полезное</p>
+				</div>
+			</fieldset>
+			<hr>
 			<button type="submit" class="btn btn--success">Сохранить всё</button>
 		</form>
 	</div>

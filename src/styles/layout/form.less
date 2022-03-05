@@ -1,3 +1,18 @@
+.form ::placeholder {
+	color: var(--color-light-text);
+}
+
+.form :disabled,
+.form :hover:disabled,
+.form :focus:disabled,
+.form :active:disabled {
+	color: var(--color-light-text);
+	background-color: var(--bg-body);
+	border-color: var(--bg-light);
+	box-shadow: none;
+	opacity: 0.7;
+}
+
 .form__fieldset {
 	margin: 0;
 	padding: 0;
@@ -84,6 +99,7 @@
 	text-align: center;
 	color: var(--color-light-text);
 	border: 1px solid var(--bg-light);
+	transition: box-shadow 0.2s ease-in-out;
 
 	&:hover {
 		box-shadow: 0px 4px 20px 0px var(--color-light-text);
@@ -96,6 +112,18 @@
 	&:last-of-type {
 		border-radius: 0 8px 8px 0;
 	}
+}
+
+.form__radio {
+	appearance: none;
+}
+
+.form__radio:disabled + .form__radio-label {
+	opacity: 0.7;
+}
+
+.form__radio:disabled + .form__radio-label:hover {
+	box-shadow: 0 0 0 0 transparent;
 }
 
 .form__radio:focus-visible + .form__radio-label {
@@ -246,4 +274,74 @@ select.form__control {
 	&--visible::before {
 		background-image: url(../../img/form/password-visible.svg);
 	}
+}
+
+.form__checkbox-wrap {
+	& p {
+		padding-left: 60px;
+	}
+}
+
+.form__checkbox {
+	outline: none;
+}
+
+.form__checkbox-label {
+	display: flex;
+	align-items: center;
+	font-weight: 900;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--color-dark-text);
+}
+
+.form__checkbox-view {
+	position: relative;
+	display: block;
+	flex-shrink: 0;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	background-color: var(--bg-dark);
+	border-radius: 8px;
+	transition: box-shadow 0.2s ease-in-out;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 18px;
+		height: 12px;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.form__checkbox-label:hover .form__checkbox-view,
+.form__checkbox-view:hover {
+	box-shadow: 0 4px 20px 0 var(--color-light-text);
+}
+
+.form__checkbox:checked + .form__checkbox-view::before {
+	background-image: url(../../img/form/icon_selected.svg);
+	background-size: contain;
+}
+
+.form__checkbox:focus-visible .form__checkbox-view {
+	outline-width: 2px;
+	outline-style: double;
+	outline-color: #d1bda5;
+	outline-offset: -1px;
+	box-shadow: 0px 2px 4px 0px #3a2b4f;
+}
+
+.form__checkbox:disabled + .form__checkbox-view {
+	background-color: var(--bg-body);
+	border: 1px solid var(--bg-light);
+	box-shadow: none;
+	opacity: 0.7;
+}
+
+.form__notes {
+	line-height: 20px;
 }
