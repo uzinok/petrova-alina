@@ -6,7 +6,6 @@
 .form :hover:disabled,
 .form :focus:disabled,
 .form :active:disabled {
-	color: var(--color-light-text);
 	background-color: var(--bg-body);
 	border-color: var(--bg-light);
 	box-shadow: none;
@@ -149,11 +148,14 @@ select.form__control {
 
 .form__select-icon select {
 	padding-right: 40px;
-	padding-left: 60px;
+	// padding-left: 60px;
+	text-indent: 40px;
 }
 
 .form__select-icon option {
-	padding-left: 15px;
+	text-indent: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
 
 .form__select-icon::before {
@@ -253,7 +255,6 @@ select.form__control {
 	background-color: transparent;
 	border: 0;
 	box-shadow: none;
-	cursor: pointer;
 }
 
 .form__password-toggle {
@@ -336,12 +337,77 @@ select.form__control {
 }
 
 .form__checkbox:disabled + .form__checkbox-view {
-	background-color: var(--bg-body);
-	border: 1px solid var(--bg-light);
 	box-shadow: none;
-	opacity: 0.7;
+	opacity: 0.6;
 }
 
 .form__notes {
 	line-height: 20px;
+}
+
+.form__number-wrap {
+	display: flex;
+}
+
+.form__number-wrap ::-webkit-outer-spin-button,
+.form__number-wrap ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.form__number-wrap input {
+    appearance: textfield;
+}
+
+.form__button-minus,
+.form__button-plus {
+	position: relative;
+	width: 70px;
+}
+
+.form__button-minus {
+	border-radius: 6px 0 0 6px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 20px;
+		height: 4px;
+		background-color: var(--color-light-text);
+	}
+}
+
+.form__button-plus {
+	border-radius: 0 6px 6px 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 20px;
+		height: 4px;
+		background-color: var(--color-light-text);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 4px;
+		height: 20px;
+		background-color: var(--color-light-text);
+	}
+}
+
+.form__number {
+	text-align: center;
+	border-radius: 0;
+	margin-left: 2px;
+	margin-right: 2px;
 }

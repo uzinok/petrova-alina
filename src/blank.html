@@ -17,6 +17,7 @@
 
 	<hr>
 	<div class="col blank">
+
 		<a href="#" class="btn btn--text-small">Вернуть как было</a>
 		<hr>
 		<button class="btn btn--text-small">Вернуть как было</button>
@@ -29,8 +30,25 @@
 		<hr>
 		<button class="btn btn--success" disabled>Сменить пароль</button>
 
+		<hr>
 		<form action="#" method="get" class="form">
-			<hr>
+
+			<div class="form__grid">
+				<label for="height" class="form__label">Рост (см)</label>
+				<div class="form__number-wrap--js">
+					<button type="button" class="form__control form__button-minus" aria-label="Меньше." style="display: none;"></button>
+					<input type="number" id="height" class="form__control form__number" min="100" max="250" step="5" placeholder="185" required>
+					<button type="button" class="form__control form__button-plus" aria-label="Больше." style="display: none;"></button>
+				</div>
+
+				<label for="weight" class="form__label">Вес (кг)</label>
+				<div class="form__number-wrap--js">
+					<button type="button" class="form__control form__button-minus" aria-label="Меньше." style="display: none;"></button>
+					<input type="number" id="weight" class="form__control form__number" min="25" max="250" step="0.1" placeholder="70" required>
+					<button type="button" class="form__control form__button-plus" aria-label="Больше." style="display: none;"></button>
+				</div>
+			</div>
+
 			<fieldset class="form__fieldset">
 				<legend class="form__legend">Контакты</legend>
 
@@ -58,7 +76,6 @@
 
 				<div class="form__label">Пол</div>
 				<div class="form__radio-wrap">
-
 					<input id="female" class="visually-hidden form__radio" type="radio" name="gender" value="female" checked>
 					<label for="female" class="form__radio-label">Женский</label>
 
@@ -67,16 +84,13 @@
 
 					<input id="other" class="visually-hidden form__radio" type="radio" name="gender" value="other">
 					<label for="other" class="form__radio-label">Иной</label>
-
 				</div>
 
-				<div class="form__grid">
-					<label class="form__label" for="id">Логин</label>
-					<input class="form__control" id="id" type="text" value="name" required>
+				<label class="form__label" for="id">Логин</label>
+				<input class="form__control" id="id" type="text" value="name" required>
 
-					<label class="form__label" for="id1">Почта</label>
-					<input class="form__control" id="id2" type="email" placeholder="some@mail.ru" required>
-				</div>
+				<label class="form__label" for="id1">Почта</label>
+				<input class="form__control" id="id2" type="email" placeholder="some@mail.ru" required>
 
 				<label class="form__label" for="id1">Пароль</label>
 				<div class="form__password form__password--js">
@@ -144,7 +158,7 @@
 					<input class="form__control" id="id1" type="text" value="name" required disabled>
 
 					<label class="form__label" for="id11">Почта</label>
-					<input class="form__control" id="id21" type="email" placeholder="some@mail.ru" required disabled>
+					<input class="form__control" id="id11" type="email" placeholder="some@mail.ru" required disabled>
 				</div>
 
 				<div class="form__checkbox-wrap">
@@ -158,6 +172,7 @@
 					<p class="form__notes">Обновление питания, тренировок, ответы в чатах, промокоды, акции и скидки. Только важное и полезное</p>
 				</div>
 			</fieldset>
+
 			<hr>
 			<button type="submit" class="btn btn--success">Сохранить всё</button>
 		</form>

@@ -21,7 +21,7 @@ if (document.querySelectorAll('.form__select-icon--js')) {
 	}
 }
 
-// password
+// input password
 if (document.querySelectorAll('.form__password--js')) {
 	const arrInputPassword = document.querySelectorAll('.form__password--js');
 
@@ -37,5 +37,37 @@ if (document.querySelectorAll('.form__password--js')) {
 				return input.setAttribute('type', 'text');
 			return input.setAttribute('type', 'password');
 		})
+	});
+}
+
+// input number
+if (document.querySelector('.form__number-wrap--js')) {
+	const numberWrap = document.querySelectorAll('.form__number-wrap--js');
+
+	numberWrap.forEach(elem => {
+		elem.classList.add('form__number-wrap');
+		const input = elem.querySelector('input');
+		const plus = elem.querySelector('.form__button-plus');
+		const minus = elem.querySelector('.form__button-minus');
+		plus.removeAttribute('style');
+		minus.removeAttribute('style');
+
+		plus.addEventListener('click', () => {
+			const value = +input.value + +input.getAttribute('step');
+
+			if (value >= +input.max) {
+				return input.value = input.max.toFixed(1);
+			}
+			input.value = value.toFixed(1);
+		});
+
+		minus.addEventListener('click', () => {
+			const value = +input.value + +input.getAttribute('step');
+
+			if (value >= +input.min) {
+				return input.value = input.min.toFixed(1);
+			}
+			input.value = value.toFixed(1);
+		});
 	});
 }
