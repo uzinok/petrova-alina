@@ -31,7 +31,7 @@ if (document.querySelectorAll('.form__password--js')) {
 
 		button.removeAttribute('style');
 
-		button.addEventListener('click', function () {
+		button.addEventListener('click', function() {
 			this.classList.toggle('form__password-toggle--visible')
 			if (input.type == 'password')
 				return input.setAttribute('type', 'text');
@@ -75,4 +75,18 @@ if (document.querySelector('.form__number-wrap--js')) {
 			input.value = value;
 		});
 	});
+}
+
+// all
+// ryear
+if (document.querySelector('.ryear')) {
+	let spanRyear = document.querySelectorAll('.ryear');
+
+	let date = new Date();
+	let year = date.getFullYear();
+
+	for (let i = 0; i < spanRyear.length; i++) {
+
+		spanRyear[i].textContent = year;
+	}
 }

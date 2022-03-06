@@ -68,4 +68,16 @@ if (document.querySelector('.form__number-wrap--js')) {
       input.value = value;
     });
   });
+} // all
+// ryear
+
+
+if (document.querySelector('.ryear')) {
+  var spanRyear = document.querySelectorAll('.ryear');
+  var date = new Date();
+  var year = date.getFullYear();
+
+  for (var i = 0; i < spanRyear.length; i++) {
+    spanRyear[i].textContent = year;
+  }
 }
