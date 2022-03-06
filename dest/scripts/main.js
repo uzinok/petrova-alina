@@ -47,22 +47,25 @@ if (document.querySelector('.form__number-wrap--js')) {
     plus.removeAttribute('style');
     minus.removeAttribute('style');
     plus.addEventListener('click', function () {
+      if (!input.value) return input.value = input.min;
       var value = +input.value + +input.getAttribute('step');
 
       if (value >= +input.max) {
-        return input.value = input.max.toFixed(1);
+        return input.value = input.max;
       }
 
-      input.value = value.toFixed(1);
+      input.value = value;
     });
     minus.addEventListener('click', function () {
-      var value = +input.value + +input.getAttribute('step');
+      console.log(!input.value);
+      if (!input.value) return input.value = input.min;
+      var value = +input.value - +input.getAttribute('step');
 
-      if (value >= +input.min) {
-        return input.value = input.min.toFixed(1);
+      if (value <= +input.min) {
+        return input.value = input.min;
       }
 
-      input.value = value.toFixed(1);
+      input.value = value;
     });
   });
 }
