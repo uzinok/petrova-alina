@@ -1,6 +1,7 @@
 .page-footer {
+	--color-footer-text: #85818c;
 	background-color: var(--bg-dark);
-	color: #85818c;
+	color: var(--color-footer-text);
 	font-size: 12px;
 	line-height: 16px;
 }
@@ -40,4 +41,60 @@
 	align-items: center;
 	width: 20px;
 	height: 20px;
+}
+
+.page-footer__social-link svg {
+	fill: var(--color-footer-text);
+}
+
+.page-footer__social-link--instagram:hover svg {
+	fill: url(#a);
+}
+
+.page-footer__social-link--vk svg .center {
+	fill: var(--bg-dark);
+}
+
+.page-footer__social-link--vk:hover svg {
+	fill: #2787f5;
+
+	& .center {
+		fill: #fff;
+	}
+}
+
+.page-footer__social-link--youtube svg .center {
+	fill: var(--bg-dark);
+}
+
+.page-footer__social-link--youtube:hover svg {
+	fill: #ff0000;
+
+	& .center {
+		fill: #fff;
+	}
+}
+
+.page-footer__social-link--telegram svg .center {
+	fill: var(--bg-dark);
+}
+
+.page-footer__social-link--telegram:hover svg {
+	fill: url(#a1);
+
+	& .center {
+		fill: #fff;
+	}
+}
+
+.page-footer__social-link--facebook svg .center {
+	fill: var(--bg-dark);
+}
+
+.page-footer__social-link--facebook:hover svg {
+	fill: #1877f2;
+
+	& .center {
+		fill: #fff;
+	}
 }
