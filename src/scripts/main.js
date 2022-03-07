@@ -1,3 +1,17 @@
+// all
+// ryear
+if (document.querySelector('.ryear')) {
+	let spanRyear = document.querySelectorAll('.ryear');
+
+	let date = new Date();
+	let year = date.getFullYear();
+
+	for (let i = 0; i < spanRyear.length; i++) {
+
+		spanRyear[i].textContent = year;
+	}
+}
+
 // form
 // select
 if (document.querySelectorAll('.form__select-icon--js')) {
@@ -77,16 +91,17 @@ if (document.querySelector('.form__number-wrap--js')) {
 	});
 }
 
-// all
-// ryear
-if (document.querySelector('.ryear')) {
-	let spanRyear = document.querySelectorAll('.ryear');
+// social
+if (document.querySelector('.form__social--js')) {
+	const wrap = document.querySelector('.form__social--js');
+	const select = wrap.querySelector('select');
+	let activeInput = wrap.querySelector(`input[name="${select.value}"]`);
 
-	let date = new Date();
-	let year = date.getFullYear();
+	activeInput.classList.add('form__social-input--active');
 
-	for (let i = 0; i < spanRyear.length; i++) {
-
-		spanRyear[i].textContent = year;
-	}
+	select.addEventListener('change', () => {
+		wrap.querySelector('.form__social-input--active').classList.remove('form__social-input--active');
+		activeInput = wrap.querySelector(`input[name="${select.value}"]`);
+		activeInput.classList.add('form__social-input--active');
+	})
 }
