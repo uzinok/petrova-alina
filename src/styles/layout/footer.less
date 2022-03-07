@@ -122,8 +122,8 @@
 	}
 
 	.page-footer__nav-item {
-		box-sizing: border-box;
 		flex-grow: 1;
+		box-sizing: border-box;
 	}
 
 	.page-footer__nav-item:not(:last-child) {
@@ -158,9 +158,36 @@
 }
 
 .page-footer__nav-link {
-	&:hover,
+
 	&.active {
 		color: var(--color-text);
+	}
+
+	&:hover {
+		color: var(--color-text);
+	}
+
+	&:focus-visible {
+		outline-width: 1px;
+		outline-style: double;
+		outline-color: #d1bda5;
+		outline-offset: -2px;
+	}
+
+	&:active::before {
+		opacity: 0.5;
+	}
+
+	&.active {
+		position: relative;
+
+		&::after {
+			content: url(../../img/icon/page-footer__nav-link-active.svg);
+			position: absolute;
+			top: -13px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 }
 
