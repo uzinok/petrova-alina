@@ -124,6 +124,11 @@
 			background-position: center;
 			background-size: contain;
 			transform: translateY(-50%);
+			transition: transform var(--transition);
+		}
+
+		&:hover::before {
+			transform: translate(3px, -50%);
 		}
 	}
 }
