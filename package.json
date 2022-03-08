@@ -4,7 +4,8 @@
 	"description": "html less babel",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "npx gulp build"
 	},
 	"repository": {
 		"type": "git",
