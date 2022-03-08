@@ -51,7 +51,7 @@ const paths = {
 		dest: 'dest/scripts/'
 	},
 	html: {
-		src: 'src/**/*.html',
+		src: 'src/*.html',
 		watch: 'src/**/*.html',
 		dest: 'dest/'
 	},
