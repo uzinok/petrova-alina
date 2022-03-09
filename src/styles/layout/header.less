@@ -102,13 +102,18 @@
 
 .page-header__nav-item {
 	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
 	align-items: baseline;
 
 	& svg {
 		margin-right: 32px;
+		transition: transform var(--transition), fill var(--transition);
+		fill: var(--color-text);
 	}
 
 	& a {
+		width: 100%;
 		font-weight: 700;
 		font-size: 26px;
 		line-height: 53px;
@@ -117,11 +122,18 @@
 		text-decoration: none;
 		letter-spacing: 2px;
 
+		&:hover {
+			& svg {
+				transform: translateX(4px);
+				fill: var(--color-light-text);
+			}
+		}
+
 		&:focus-visible {
 			outline-width: 2px;
 			outline-style: double;
 			outline-color: #7b7682;
-			outline-offset: -1px;
+			outline-offset: 4px;
 		}
 	}
 }

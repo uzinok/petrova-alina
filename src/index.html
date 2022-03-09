@@ -9,12 +9,10 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" href="styles/main.css">
+	<meta name="robots" content="noindex, nofollow" />
 </head>
 
 <body>
-	<div style="display: none;">
-		{% include 'img/sprite.svg' %}
-	</div>
 
 	<div class="page-grid">
 		{% include 'template/header.html' %}
@@ -32,6 +30,11 @@
 	{% include 'template/footer.html' %}
 
 	<script src="scripts/main.min.js"></script>
+
+	<div style="display: none;">
+		{% include 'img/sprite.svg' %}
+	</div>
+
 	<a href="blank.html" style="position: fixed;bottom: 0;right: 0;">blank.html</a>
 </body>
 
