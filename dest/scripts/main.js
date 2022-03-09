@@ -1,8 +1,7 @@
 "use strict";
 
 // all
-var BODY = document.body; // ryear
-
+// ryear
 if (document.querySelector('.ryear')) {
   var spanRyear = document.querySelectorAll('.ryear');
   var date = new Date();
@@ -17,12 +16,9 @@ if (document.querySelector('.ryear')) {
 var navButtonToggle = document.querySelector('.page-header__nav-toggle');
 var header = document.querySelector('.page-header');
 navButtonToggle.addEventListener('click', function () {
-  BODY.classList.toggle('nav-no-scroll');
-  header.classList.toggle('page-header__open-toggle');
-});
-console.log(navButtonToggle);
-console.log(BODY);
-console.log(header); // form
+  header.classList.toggle('page-header__open');
+  header.classList.toggle('page-header__close');
+}); // form
 // select
 
 if (document.querySelectorAll('.form__select-icon--js')) {

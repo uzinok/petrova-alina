@@ -1,7 +1,4 @@
 // all
-
-const BODY = document.body;
-
 // ryear
 if (document.querySelector('.ryear')) {
 	let spanRyear = document.querySelectorAll('.ryear');
@@ -20,13 +17,9 @@ const navButtonToggle = document.querySelector('.page-header__nav-toggle');
 const header = document.querySelector('.page-header');
 
 navButtonToggle.addEventListener('click', function () {
-	BODY.classList.toggle('nav-no-scroll');
-	header.classList.toggle('page-header__open-toggle');
-})
-
-console.log(navButtonToggle);
-console.log(BODY);
-console.log(header);
+	header.classList.toggle('page-header__open');
+	header.classList.toggle('page-header__close');
+});
 
 // form
 // select
