@@ -1,7 +1,8 @@
 "use strict";
 
 // all
-// ryear
+var BODY = document.body; // ryear
+
 if (document.querySelector('.ryear')) {
   var spanRyear = document.querySelectorAll('.ryear');
   var date = new Date();
@@ -10,9 +11,19 @@ if (document.querySelector('.ryear')) {
   for (var i = 0; i < spanRyear.length; i++) {
     spanRyear[i].textContent = year;
   }
-} // form
-// select
+} // nav
 
+
+var navButtonToggle = document.querySelector('.page-header__nav-toggle');
+var header = document.querySelector('.page-header');
+navButtonToggle.addEventListener('click', function () {
+  BODY.classList.toggle('nav-no-scroll');
+  header.classList.toggle('page-header__open-toggle');
+});
+console.log(navButtonToggle);
+console.log(BODY);
+console.log(header); // form
+// select
 
 if (document.querySelectorAll('.form__select-icon--js')) {
   var setIconSelect = function setIconSelect(elem) {

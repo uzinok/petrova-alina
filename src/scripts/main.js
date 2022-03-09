@@ -1,4 +1,7 @@
 // all
+
+const BODY = document.body;
+
 // ryear
 if (document.querySelector('.ryear')) {
 	let spanRyear = document.querySelectorAll('.ryear');
@@ -11,6 +14,19 @@ if (document.querySelector('.ryear')) {
 		spanRyear[i].textContent = year;
 	}
 }
+
+// nav
+const navButtonToggle = document.querySelector('.page-header__nav-toggle');
+const header = document.querySelector('.page-header');
+
+navButtonToggle.addEventListener('click', function () {
+	BODY.classList.toggle('nav-no-scroll');
+	header.classList.toggle('page-header__open-toggle');
+})
+
+console.log(navButtonToggle);
+console.log(BODY);
+console.log(header);
 
 // form
 // select
