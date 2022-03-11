@@ -10,13 +10,14 @@ body {
 	flex-direction: column;
 	min-height: 100%;
 	margin: 0;
+	padding-top: 82px;
 	font-weight: 500;
 	font-size: 13px;
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	color: var(--color-text);
 	background-color: var(--bg-body);
-	padding-top: 82px;
-	@media (min-width: @min-xl) {
+
+	@media (min-width: @min-md) {
 		padding-top: 0;
 	}
 }
@@ -185,12 +186,12 @@ summary {
 	}
 }
 
-@media (min-width: @min-xl) {
+@media (min-width: @min-md) {
 	.page-grid {
 		display: grid;
 		flex-grow: 1;
 		align-content: stretch;
-		grid-template-columns: 1fr 400px 80px minmax(320px, 1100px) 1fr;
+		grid-template-columns: 1fr 110px 40px minmax(320px, 1100px) 1fr;
 	}
 
 	.page-header {
@@ -198,7 +199,7 @@ summary {
 		align-self: stretch;
 		grid-column-end: 3;
 		grid-column-start: 1;
-		grid-template-columns: 1fr 400px;
+		grid-template-columns: 1fr 110px;
 		height: 100%;
 	}
 
@@ -210,8 +211,8 @@ summary {
 	.page-header__content {
 		position: sticky;
 		top: 0;
-		overflow: auto;
 		max-height: 100vh;
+		overflow: auto;
 	}
 
 	.page-main {
@@ -220,10 +221,20 @@ summary {
 	}
 
 	.page-footer__col {
-		width: 100%;
-		padding-left: 0;
 		grid-column-end: 5;
 		grid-column-start: 4;
+		width: 100%;
+		padding-left: 0;
+	}
+}
+
+@media (min-width: @min-xl) {
+	.page-grid {
+		grid-template-columns: 1fr 400px 80px minmax(320px, 1100px) 1fr;
+	}
+
+	.page-header {
+		grid-template-columns: 1fr 400px;
 	}
 }
 
