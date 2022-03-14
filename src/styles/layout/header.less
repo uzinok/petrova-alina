@@ -269,9 +269,18 @@
 }
 
 @media (min-width: @min-md) and (max-width: @max-xl) {
+	.page-header {
+		position: fixed;
+		display: block;
+		width: 110px;
+		transition: width var(--transition);
+	}
+	.page-header__open {
+		width: 400px;
+	}
 	.page-header__close {
 		.page-header__content {
-			overflow: hidden;
+			overflow-x: hidden;
 		}
 
 		.page-header__top {
@@ -318,8 +327,32 @@
 		}
 
 		.page-header__bottom-btn {
+			position: relative;
 			padding: 0;
 			font-size: 0;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+
+			&:hover {
+				background-color: var(--color-text);
+				box-shadow: none;
+				border-color: var(--color-text);
+
+				&::before {
+					color: var(--bg-dark)
+				}
+			}
+
+			&::before {
+				content: '?';
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 40px;
+				line-height: 60px;
+			}
 		}
 	}
 }
