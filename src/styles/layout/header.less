@@ -96,13 +96,13 @@
 	align-items: center;
 	margin: 0;
 	font-weight: 700;
+	font-size: 20px;
 	font-family: var(--font-bebas);
 	color: var(--color-light-text);
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
 	transition: opacity var(--transition);
-		font-size: 20px;
-		text-transform: uppercase;
-		text-decoration: none;
-		letter-spacing: 2px;
 
 	&:hover {
 		opacity: 0.7;
@@ -129,14 +129,14 @@
 }
 
 .page-header__user-exit {
+	font-size: 20px;
 	font-family: var(--font-bebas);
 	color: #7b7682;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
 	border-bottom: 1px dashed #7b7682;
 	transition: opacity var(--transition);
-		font-size: 20px;
-		text-transform: uppercase;
-		text-decoration: none;
-		letter-spacing: 2px;
 
 	&:hover {
 		opacity: 0.7;
@@ -179,7 +179,8 @@
 		width: 100%;
 		font-weight: 700;
 		font-size: 26px;
-		line-height: 53px;
+		line-height: 28px;
+		padding: 11px 0;
 		font-family: var(--font-bebas);
 		color: var(--color-light-text);
 		text-decoration: none;
@@ -268,15 +269,57 @@
 }
 
 @media (min-width: @min-md) and (max-width: @max-xl) {
-	.page-header__logo {
-		display: none;
-	}
+	.page-header__close {
+		.page-header__content {
+			overflow: hidden;
+		}
 
-	.page-header__user-wrap > div {
-		min-width: initial;
-	}
+		.page-header__top {
+			padding: 30px;
+		}
 
-	.page-header__user-name {
-		font-size: 0;
+		.page-header__logo {
+			display: none;
+		}
+
+		.page-header__nav-toggle {
+			right: 50%;
+			transform: translate(50%, -50%);
+		}
+
+		.page-header__user-wrap > div {
+			min-width: initial;
+		}
+
+		.page-header__user-name {
+			font-size: 0;
+			letter-spacing: normal;
+		}
+
+		.page-header__user-ava {
+			margin-right: 0;
+		}
+
+		.page-header__user-exit {
+			display: none;
+		}
+
+		.page-header__nav {
+			min-width: initial;
+		}
+
+		.page-header__nav-item a {
+			font-size: 0;
+			line-height: 0;
+		}
+
+		.page-header__bottom-notes {
+			display: none;
+		}
+
+		.page-header__bottom-btn {
+			padding: 0;
+			font-size: 0;
+		}
 	}
 }
