@@ -16,7 +16,7 @@ if (document.querySelector('.ryear')) {
 const navButtonToggle = document.querySelector('.page-header__nav-toggle');
 const header = document.querySelector('.page-header');
 
-navButtonToggle.addEventListener('click', function () {
+navButtonToggle.addEventListener('click', function() {
 	header.classList.toggle('page-header__open');
 	header.classList.toggle('page-header__close');
 });
@@ -104,13 +104,23 @@ if (document.querySelector('.form__number-wrap--js')) {
 if (document.querySelector('.form__social--js')) {
 	const wrap = document.querySelector('.form__social--js');
 	const select = wrap.querySelector('select');
+	const allInput = wrap.querySelectorAll('input');
+	// console.log(allInput.length);
+	for (let i = 0; allInput.length > i; i++) {
+		console.log(allInput);
+		allInput[i].setAttribute('tabindex', -1);
+	}
+
 	let activeInput = wrap.querySelector(`input[name="${select.value}"]`);
 
 	activeInput.classList.add('form__social-input--active');
+	activeInput.setAttribute('tabindex', 0);
 
 	select.addEventListener('change', () => {
+		wrap.querySelector('.form__social-input--active').setAttribute('tabindex', -1);
 		wrap.querySelector('.form__social-input--active').classList.remove('form__social-input--active');
 		activeInput = wrap.querySelector(`input[name="${select.value}"]`);
 		activeInput.classList.add('form__social-input--active');
+		activeInput.setAttribute('tabindex', 0);
 	})
 }

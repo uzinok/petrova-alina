@@ -72,10 +72,6 @@
 		font-size: 16px;
 	}
 
-	&:invalid {
-		// background-color: #3a2b4f;
-	}
-
 	&:hover {
 		box-shadow: 0px 4px 20px 0px var(--color-light-text);
 	}
@@ -333,10 +329,14 @@ select.form__control {
 	display: flex;
 
 	& select {
-		min-width: 215px;
+		width: 100px;
 		margin-right: 2px;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
+
+		@media (min-width: @min-sm) {
+			width: 215px;
+		}
 	}
 
 	& input {

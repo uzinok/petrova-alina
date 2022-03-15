@@ -93,11 +93,22 @@ if (document.querySelector('.form__number-wrap--js')) {
 if (document.querySelector('.form__social--js')) {
   var wrap = document.querySelector('.form__social--js');
   var select = wrap.querySelector('select');
+  var allInput = wrap.querySelectorAll('input'); // console.log(allInput.length);
+
+  for (var _i = 0; allInput.length > _i; _i++) {
+    console.log(allInput);
+
+    allInput[_i].setAttribute('tabindex', -1);
+  }
+
   var activeInput = wrap.querySelector("input[name=\"".concat(select.value, "\"]"));
   activeInput.classList.add('form__social-input--active');
+  activeInput.setAttribute('tabindex', 0);
   select.addEventListener('change', function () {
+    wrap.querySelector('.form__social-input--active').setAttribute('tabindex', -1);
     wrap.querySelector('.form__social-input--active').classList.remove('form__social-input--active');
     activeInput = wrap.querySelector("input[name=\"".concat(select.value, "\"]"));
     activeInput.classList.add('form__social-input--active');
+    activeInput.setAttribute('tabindex', 0);
   });
 }
