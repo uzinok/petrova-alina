@@ -252,11 +252,11 @@ function createAvif() {
 }
 
 function sprite() {
-	return src(paths.img.resourceSvg + "/*.svg")
+	return src(paths.img.resourceSvg + "/form-sprite-svg/*.svg")
 		.pipe(svgSprite({
 			mode: {
 				stack: {
-					sprite: "../sprite.svg"
+					sprite: "../form-sprite.svg"
 				}
 			},
 		}))
