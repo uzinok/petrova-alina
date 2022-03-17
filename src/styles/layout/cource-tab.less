@@ -1,4 +1,16 @@
 .cource-tab {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin-bottom: 30px;
+
+	@media (max-width: 700px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.cource-tab__link {
 	position: relative;
 	display: inline-flex;
 	justify-content: center;
@@ -7,7 +19,6 @@
 	width: 100%;
 	max-width: 300px;
 	min-height: 80px;
-	margin: 5px;
 	padding: 10px 60px;
 	overflow: hidden;
 	font-weight: 900;
