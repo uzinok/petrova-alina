@@ -1,0 +1,67 @@
+.cource-tab {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 300px;
+	min-height: 80px;
+	margin: 5px;
+	padding: 10px 60px;
+	overflow: hidden;
+	font-weight: 900;
+	font-size: 20px;
+	line-height: 22px;
+	text-align: center;
+	color: var(--color-dark-text);
+	text-decoration: none;
+	background: var(--bg-body);
+	border-radius: 20px;
+	box-shadow: 0 6px 18px var(--color-light-text);
+	transition: background var(--transition);
+
+	@media (min-width: @min-md) {
+		max-width: 250px;
+		min-height: 100px;
+		padding: 15px 40px;
+	}
+
+	& svg {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: auto;
+		height: 100%;
+		opacity: 0;
+		transition: opacity var(--transition), fill var(--transition);
+	}
+
+	&:hover svg {
+		opacity: 0.1;
+		fill: var(--color-dark-text);
+	}
+
+	&:focus-visible {
+		outline-width: 2px;
+		outline-style: double;
+		outline-color: #d1bda5;
+		outline-offset: -1px;
+
+		& svg {
+			opacity: 0.05;
+		}
+	}
+
+	&:active,
+	&--active {
+		color: var(--color-light-text);
+		background-color: var(--bg-dark);
+
+		& svg {
+			opacity: 0.1;
+			fill: var(--color-light-text) !important;
+		}
+	}
+}
