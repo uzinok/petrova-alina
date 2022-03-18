@@ -10,16 +10,11 @@ body {
 	flex-direction: column;
 	min-height: 100%;
 	margin: 0;
-	padding-top: 82px;
 	font-weight: 500;
 	font-size: 13px;
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	color: var(--color-text);
 	background-color: var(--bg-body);
-
-	@media (min-width: @min-md) {
-		padding-top: 0;
-	}
 }
 
 abbr[title] {
@@ -186,10 +181,18 @@ summary {
 	}
 }
 
+body > div.page-grid {
+	flex-grow: 1;
+	padding-top: 82px;
+
+	@media (min-width: @min-md) {
+		padding-top: 0;
+	}
+}
+
 @media (min-width: @min-md) {
 	.page-grid {
 		display: grid;
-		flex-grow: 1;
 		align-content: stretch;
 		grid-template-columns: 1fr 110px 40px minmax(320px, 1100px) 1fr;
 	}
@@ -218,6 +221,7 @@ summary {
 	.page-main {
 		grid-column-end: 5;
 		grid-column-start: 4;
+		width: 100%;
 	}
 
 	.page-footer__col {
@@ -265,13 +269,13 @@ summary {
 
 
 h2 {
-	color: var(--color-light-text);
-	font-size: 22px;
-	margin: 0.7em 0 0;
-	line-height: 45px;
 	width: 100%;
-	text-align: center;
+	margin: 0.7em 0 0;
+	font-size: 22px;
+	line-height: 45px;
 	font-family: var(--font-bebas);
+	text-align: center;
+	color: var(--color-light-text);
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }

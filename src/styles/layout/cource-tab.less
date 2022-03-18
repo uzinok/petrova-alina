@@ -1,12 +1,19 @@
 .cource-tab {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+	justify-content: center;
+	justify-items: center;
 	gap: 20px;
 	margin-bottom: 30px;
 
 	@media (max-width: 700px) {
 		flex-direction: column;
 		align-items: center;
+	}
+
+	& h2 {
+		grid-column-start: 1;
+		grid-column-end: -1;
 	}
 }
 
@@ -33,7 +40,6 @@
 	transition: background var(--transition);
 
 	@media (min-width: @min-md) {
-		max-width: 250px;
 		min-height: 100px;
 		padding: 15px 40px;
 	}
