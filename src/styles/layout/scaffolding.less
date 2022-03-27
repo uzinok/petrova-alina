@@ -234,7 +234,7 @@ body > div.page-grid {
 
 @media (min-width: @min-xl) {
 	.page-grid {
-		grid-template-columns: 1fr 400px 80px minmax(320px, 1100px) 1fr;
+		grid-template-columns: 1fr 400px 80px minmax(320px, 1140px) 1fr;
 	}
 
 	.page-header {
@@ -278,4 +278,19 @@ h2 {
 	color: var(--color-light-text);
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+
+.cource-wrap-level {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, 340px);
+	margin-bottom: 30px;
+	padding-bottom: 65px;
+	justify-items: center;
+	gap: 20px;
+
+	& h2 {
+		grid-column-start: 1;
+    grid-column-end: -1;
+	}
 }
