@@ -60,7 +60,10 @@
 		height: 390px;
 	}
 
-	.cource-level:hover {
+	.cource-level:hover,
+	.cource-level:focus,
+	.cource-level:focus-within {
+		outline: none;
 		& .cource-level__icon {
 			filter: grayscale(0%);
 		}
