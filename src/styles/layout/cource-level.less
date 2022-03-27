@@ -30,6 +30,7 @@
 	text-align: center;
 
 	@media (min-width: @min-lg) {
+		overflow: hidden;
 		height: 75px;
 		transition: height var(--transition);
 
@@ -40,6 +41,7 @@
 
 		& .btn:last-child {
 			opacity: 0;
+			// pointer-events: none;
 		}
 	}
 
@@ -64,6 +66,7 @@
 	.cource-level:focus,
 	.cource-level:focus-within {
 		outline: none;
+
 		& .cource-level__icon {
 			filter: grayscale(0%);
 		}
@@ -78,6 +81,7 @@
 
 			& .btn:last-child {
 				opacity: 1;
+				// pointer-events: initial;
 			}
 		}
 	}
