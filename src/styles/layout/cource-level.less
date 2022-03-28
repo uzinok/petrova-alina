@@ -65,7 +65,6 @@
 	}
 
 	.cource-level:hover,
-	.cource-level:focus,
 	.cource-level:focus-within {
 		outline: none;
 
@@ -77,13 +76,12 @@
 			position: relative;
 			z-index: 1;
 			height: 156px;
-			background-image: linear-gradient(to top, var(--bg-body) 86px, transparent 70px);
+			background-image: linear-gradient(to top,var(--bg-body) 80px,transparent 61px);
 			border-radius: 0 0 20px 20px;
 			box-shadow: 0 16px 18px 0px var(--color-light-text);
 
 			& .btn:last-child {
 				opacity: 1;
-				// pointer-events: initial;
 			}
 		}
 	}
@@ -155,6 +153,8 @@
 }
 
 .cource-level__icon {
+	position: relative;
+	z-index: 2;
 	margin-top: 5px;
 	padding-bottom: 68.825%;
 	background-repeat: no-repeat;
@@ -217,5 +217,30 @@
 
 	&--weight-professional-5 {
 		background-image: url(../../img/cource-level/weight/professional.png);
+	}
+
+	// press
+	&--press-1 {
+		background-image: url(../../img/cource-level/press/hobbyist.png);
+	}
+
+	&--press-professional-1 {
+		background-image: url(../../img/cource-level/press/professional-1.png);
+	}
+
+	&--press-professional-2 {
+		background-image: url(../../img/cource-level/press/professional-2-3-4-5.png);
+	}
+
+	&--press-professional-3 {
+		background-image: url(../../img/cource-level/press/professional-2-3-4-5.png);
+	}
+
+	&--press-professional-4 {
+		background-image: url(../../img/cource-level/press/professional-2-3-4-5.png);
+	}
+
+	&--press-professional-5 {
+		background-image: url(../../img/cource-level/press/professional-2-3-4-5.png);
 	}
 }
