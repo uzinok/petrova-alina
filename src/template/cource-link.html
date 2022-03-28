@@ -11,7 +11,7 @@
 	{% include 'img/cource-icon/course_tab_body.svg' %}
 	Рельефное тело
 </a>
-<a href="#" class="cource-link">
+<a href="cource-back.html" class="cource-link {% if namePage == 'cource-back' %} cource-link--active {% endif %}" {% if namePage == 'cource-body' %} aria-current="page" {% endif %}>
 	{% include 'img/cource-icon/course_tab_back.svg' %}
 	Здоровая спина
 </a>
