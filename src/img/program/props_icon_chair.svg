@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55.66" height="83.31" viewBox="0 0 55.66 83.31">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #494450;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="props_icon_chair" class="cls-1" d="M1337.69,1328.87V1290h-35.67v38.87l-10,10.22v34.21h2.88v-25.55h7.12v10.02h2.89v-10.02h29.89v10.02h2.89v-10.02h7.11v25.55h2.88v-34.21Zm-10.93-36h8.04v35.15h-8.04v-35.15Zm-10.93,0h8.04v35.15h-8.04v-35.15Zm-10.92,0h8.03v35.15h-8.03v-35.15Zm-0.84,38.02h31.56l8.06,8.2h-47.68Zm40.73,14h-49.9v-2.93h49.9v2.93Z" transform="translate(-1292.03 -1290)"/>
+</svg>

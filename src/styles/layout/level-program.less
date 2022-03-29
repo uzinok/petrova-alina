@@ -1,0 +1,64 @@
+.level-program {
+	display: inline-grid;
+	grid-template-columns: repeat(3, 24px);
+	gap: 4px;
+
+	& span {
+		height: 10px;
+		border: 1px solid #fff;
+	}
+}
+
+.level-program {
+	&--1 {
+		& span:first-child {
+			background-image: linear-gradient(to right, #fff 50%, transparent 50%);
+		}
+	}
+
+	&--2 {
+		& span:first-child {
+			background-color: #fff;
+		}
+	}
+
+	&--3 {
+		& span:first-child {
+			background-color: #fff;
+		}
+
+		& span:nth-child(2) {
+			background-image: linear-gradient(to right, #fff 50%, transparent 50%);
+		}
+	}
+
+	&--4 {
+		& span:first-child {
+			background-color: #fff;
+		}
+
+		& span:nth-child(2) {
+			background-color: #fff;
+		}
+	}
+
+	&--5 {
+		& span:first-child {
+			background-color: #fff;
+		}
+
+		& span:nth-child(2) {
+			background-color: #fff;
+		}
+
+		& span:last-child {
+			background-image: linear-gradient(to right, #fff 50%, transparent 50%);
+		}
+	}
+
+	&--6 {
+		& span {
+			background-color: #fff;
+		}
+	}
+}

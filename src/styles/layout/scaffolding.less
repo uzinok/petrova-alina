@@ -219,6 +219,8 @@ body > div.page-grid {
 	}
 
 	.page-main {
+		position: relative;
+		z-index: 0;
 		grid-column-end: 5;
 		grid-column-start: 4;
 		width: 100%;
@@ -290,7 +292,7 @@ h2 {
 	gap: 20px;
 
 	& h2 {
+		grid-column-end: -1;
 		grid-column-start: 1;
-    grid-column-end: -1;
 	}
 }
