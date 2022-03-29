@@ -1,0 +1,127 @@
+.program__header {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 68.75vw;
+	margin-right: calc(var(--offset-page) * -1);
+	margin-left: calc(var(--offset-page) * -1);
+	background-image: linear-gradient(to top, #414141, transparent), url(../../img/program/bg-header-buttocks.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom 60px;
+	background-size: cover;
+
+	@media (min-width: @min-md) {
+		height: calc(68.75vw - 160px);
+	}
+
+	@media (min-width: @min-xl) {
+		height: 803px;
+		background-position: center bottom 120px;
+	}
+}
+
+.program__heading {
+	max-width: 77%;
+	margin: 0 0 20px;
+	font-weight: 900;
+	font-size: 28px;
+	line-height: 30px;
+	font-family: var(--font-bebas);
+	color: var(--bg-body);
+	text-transform: uppercase;
+	letter-spacing: 4px;
+
+	@media (min-width: @min-lg) {
+		font-size: 44px;
+		line-height: 48px;
+	}
+
+	& span {
+		display: inline-block;
+		width: 100%;
+		font-size: 15px;
+
+		@media (min-width: @min-lg) {
+			font-size: 22px;
+		}
+	}
+}
+
+.program__info {
+	margin: 0 calc(var(--offset-page) * -1);
+	padding-top: 14.5px;
+	padding-bottom: 14px;
+	color: var(--bg-body);
+	background-color: var(--color-light-text);
+
+	@media (min-width: @min-lg) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 18px;
+		padding-bottom: 18px;
+
+		.btn {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-radius: 37px;
+		}
+	}
+}
+
+.program__header-list {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	@media (max-width: @max-lg) {
+		gap: 20px;
+	}
+}
+
+.program__header-item {
+	font-size: 10px;
+	font-size: 14px;
+
+	@media (min-width: @min-lg) {
+		padding: 20px 0 21px;
+
+		&:not(:last-child) {
+			padding-right:7px;
+			border-right: 1px solid var(--bg-body);
+		}
+
+		&:not(:first-child) {
+			padding-left:7px;
+		}
+	}
+}
+
+.program__header-item .level-program {
+
+	@media (max-width: @max-lg) {
+		gap: 2px;
+
+		& span {
+			width: 16px;
+			height: 4px;
+		}
+	}
+}
+
+.program__header-list-title {
+	display: inline-block;
+	width: 100%;
+	font-weight: 900;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--color-dark-text);
+
+	@media (min-width: @min-lg) {
+		font-size: 20px;
+		line-height: 28px;
+	}
+}

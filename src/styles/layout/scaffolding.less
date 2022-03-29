@@ -111,6 +111,13 @@ summary {
 	display: list-item;
 }
 
+del {
+	&::before,
+	&::after {
+		content: '\00a0';
+	}
+}
+
 .visually-hidden {
 	position: absolute;
 	width: 0;
@@ -250,13 +257,9 @@ body > div.page-grid {
 	max-width: 1620px;
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-right: var(--offset-page);
+	padding-left: var(--offset-page);
 
-	@media (min-width: @min-md) {
-		padding-right: 40px;
-		padding-left: 40px;
-	}
 }
 
 .page-content {

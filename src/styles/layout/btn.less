@@ -1,7 +1,7 @@
 .btn {
 	display: inline-block;
 	box-sizing: border-box;
-	padding: 15px 50px 12px;
+	padding: 13px 50px 13px;
 	font-weight: 700;
 	font-size: 22px;
 	line-height: 1;
@@ -65,4 +65,13 @@
 .btn:disabled {
 	box-shadow: none;
 	opacity: 0.6;
+}
+
+// выравнивание текста по вертикали
+.btn {
+	&::before {
+		content: '';
+		display: inline-block;
+		height: 1em;
+	}
 }
