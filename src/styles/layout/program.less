@@ -3,6 +3,7 @@
 	flex-direction: column;
 	justify-content: flex-end;
 	height: 68.75vw;
+	min-height: 250px;
 	margin-right: calc(var(--offset-page) * -1);
 	margin-left: calc(var(--offset-page) * -1);
 	background-image: linear-gradient(to top, #414141, transparent), url(../../img/program/bg-header-buttocks.jpg);
@@ -59,8 +60,8 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		padding-top: 18px;
-		padding-bottom: 18px;
+		padding-top: 20px;
+		padding-bottom: 21px;
 
 		.btn {
 			padding-top: 20px;
@@ -87,15 +88,15 @@
 	font-size: 14px;
 
 	@media (min-width: @min-lg) {
-		padding: 20px 0 21px;
+		padding: 17px 0 18px;
 
 		&:not(:last-child) {
-			padding-right:7px;
+			padding-right: 40px;
 			border-right: 1px solid var(--bg-body);
 		}
 
 		&:not(:first-child) {
-			padding-left:7px;
+			padding-left: 40px;
 		}
 	}
 }
@@ -113,8 +114,7 @@
 }
 
 .program__header-list-title {
-	display: inline-block;
-	width: 100%;
+	display: block;
 	font-weight: 900;
 	font-size: 14px;
 	line-height: 20px;
