@@ -11,10 +11,16 @@ body {
 	min-height: 100%;
 	margin: 0;
 	font-weight: 500;
-	font-size: 13px;
+	font-size: 14px;
+	line-height: 22px;
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	color: var(--color-text);
 	background-color: var(--bg-body);
+
+	@media (min-width: @min-lg) {
+		font-size: 18px;
+		line-height: 28px;
+	}
 }
 
 abbr[title] {
@@ -112,6 +118,7 @@ summary {
 }
 
 del {
+
 	&::before,
 	&::after {
 		content: '\00a0';
