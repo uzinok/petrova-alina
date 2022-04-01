@@ -9,6 +9,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="./library/swiper-8.0.7/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -68,11 +69,18 @@
 					<div class="inventory-wrap">
 						<h2 class="title">Инвентарь</h2>
 
-						<div class="stock-list">
-							<div class="stock-item icon-stock icon-stock--mat">Коврик</div>
-							<div class="stock-item icon-stock icon-stock--chair">Стул</div>
-							<div class="stock-item icon-stock icon-stock--dumbbells">Гантели</div>
+						<div class="swiper stock-list-wrap">
+
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+
+							<div class="stock-list swiper-wrapper">
+								<div class="stock-item icon-stock icon-stock--mat swiper-slide">Коврик</div>
+								<div class="stock-item icon-stock icon-stock--chair swiper-slide">Стул</div>
+								<div class="stock-item icon-stock icon-stock--dumbbells swiper-slide">Гантели</div>
+							</div>
 						</div>
+
 					</div>
 
 					<ul class="schedule-list">
@@ -106,8 +114,14 @@
 
 	{% include 'template/footer.html' %}
 
+	<script src="./library/swiper-8.0.7/swiper-bundle.min.js"></script>
+	<script>
+		const swiper = new Swiper('.swiper', {
+		speed: 400,
+		spaceBetween: 100,
+		});
+	</script>
 	<script src="scripts/main.min.js"></script>
-
 	<div style="display: none;">
 		{% include 'img/sprite.svg' %}
 	</div>

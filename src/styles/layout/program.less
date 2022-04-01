@@ -75,7 +75,7 @@
 	.program__btn {
 		display: block;
 		width: fit-content;
-		margin: 0 auto;
+		margin: 22px auto;
 	}
 }
 
@@ -131,5 +131,51 @@
 	@media (min-width: @min-lg) {
 		font-size: 20px;
 		line-height: 28px;
+	}
+}
+
+.program__description-list-wrap {
+	border: 1px solid var(--color-light-text);
+
+	@media (max-width: @max-md) {
+		margin-right: calc((var(--offset-page) - 5px) * -1);
+		margin-left: calc((var(--offset-page) - 5px) * -1);
+	}
+
+	& h2 {
+		color: var(--color-dark-text);
+	}
+}
+
+.program__description-list {
+	padding: 0;
+	padding-left: 24px;
+	list-style-type: none;
+}
+
+.program__description-item {
+	position: relative;
+
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin-right: 8px;
+		background-color: var(--color-light-text);
+		border-radius: 50%;
+	}
+}
+
+.inventory-wrap {
+	background-color: var(--color-light-text);
+
+	@media (max-width: @max-md) {
+		margin-right: calc(var(--offset-page) * -1);
+		margin-left: calc(var(--offset-page) * -1);
+	}
+
+	& h2 {
+		color: var(--color-dark-text);
 	}
 }
