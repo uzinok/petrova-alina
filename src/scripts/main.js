@@ -18,7 +18,7 @@ if (document.querySelector('.no-js')) {
 
 	listNoJs.forEach(elem => {
 		elem.classList.remove('no-js');
-	})
+	});
 }
 
 //

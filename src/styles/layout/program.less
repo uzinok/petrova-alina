@@ -168,6 +168,7 @@
 }
 
 .inventory-wrap {
+	position: relative;
 	background-color: var(--color-light-text);
 
 	@media (max-width: @max-md) {
@@ -176,17 +177,38 @@
 	}
 
 	& h2 {
+		margin: 0;
 		color: var(--color-dark-text);
 	}
 }
 
-.stock-list.no-js {
+.no-js .inventory-list {
+	display: flex;
 	overflow-x: auto;
 	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
 }
 
-.no-js .stock-item {
+.no-js .inventory-item {
 	flex-shrink: 0;
+	flex-basis: 33.33%;
 	scroll-snap-align: center;
+}
+
+button.inventory-button {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	width: 16px;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+	background-color: aqua;
+	transform: translateY(-50%);
+}
+button.inventory-button--prev {
+	left: 7px;
+}
+button.inventory-button--next {
+	right: 7px;
 }
