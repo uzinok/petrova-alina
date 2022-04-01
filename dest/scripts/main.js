@@ -10,7 +10,16 @@ if (document.querySelector('.ryear')) {
   for (var i = 0; i < spanRyear.length; i++) {
     spanRyear[i].textContent = year;
   }
-} // nav
+} // no-js
+
+
+if (document.querySelector('.no-js')) {
+  var listNoJs = document.querySelectorAll('.no-js');
+  listNoJs.forEach(function (elem) {
+    elem.classList.remove('no-js');
+  });
+} //
+// nav
 
 
 var navButtonToggle = document.querySelector('.page-header__nav-toggle');

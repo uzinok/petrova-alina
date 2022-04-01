@@ -12,6 +12,17 @@ if (document.querySelector('.ryear')) {
 	}
 }
 
+// no-js
+if (document.querySelector('.no-js')) {
+	const listNoJs = document.querySelectorAll('.no-js');
+
+	listNoJs.forEach(elem => {
+		elem.classList.remove('no-js');
+	})
+}
+
+//
+
 // nav
 const navButtonToggle = document.querySelector('.page-header__nav-toggle');
 const header = document.querySelector('.page-header');

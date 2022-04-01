@@ -179,3 +179,14 @@
 		color: var(--color-dark-text);
 	}
 }
+
+.stock-list.no-js {
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+}
+
+.no-js .stock-item {
+	flex-shrink: 0;
+	scroll-snap-align: center;
+}
