@@ -135,10 +135,14 @@
 }
 
 .program__description-list-wrap {
+	box-sizing: border-box;
+	padding-right: 15px;
 	border: 1px solid var(--color-light-text);
+	border-radius: 7px;
 
 	@media (max-width: @max-md) {
 		margin-right: calc((var(--offset-page) - 5px) * -1);
+		margin-bottom: 5px;
 		margin-left: calc((var(--offset-page) - 5px) * -1);
 	}
 
@@ -169,6 +173,8 @@
 
 .inventory-wrap {
 	position: relative;
+	padding-top: 16px;
+	padding-bottom: 20px;
 	background-color: var(--color-light-text);
 
 	@media (max-width: @max-md) {
@@ -195,6 +201,10 @@
 	scroll-snap-align: center;
 }
 
+.inventory-list {
+	margin-top: 1em;
+}
+
 button.inventory-button {
 	position: absolute;
 	top: 50%;
@@ -203,12 +213,86 @@ button.inventory-button {
 	height: 25px;
 	margin: 0;
 	padding: 0;
-	background-color: aqua;
-	transform: translateY(-50%);
+	background-color: transparent;
+	border: 0;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 16px;
+		height: 3px;
+		background-color: var(--bg-body);
+	}
+
+	&::before {
+		bottom: 6px;
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		top: 6px;
+		transform: rotate(-45deg);
+	}
 }
+
 button.inventory-button--prev {
 	left: 7px;
 }
+
 button.inventory-button--next {
 	right: 7px;
+	transform: scale(-1, 1);
+}
+
+.inventory-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.icon-stock {
+
+	&::before {
+		content: '';
+		display: block;
+		width: 56px;
+		height: 56px;
+		margin-bottom: 3px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		@media (min-width: @min-lg) {
+			width: 81px;
+			height: 83px;
+			margin-bottom: 25px;
+		}
+	}
+
+	&--mat::before {
+		background-image: url(../../img/program/icon/mat.svg);
+	}
+
+	&--chair::before {
+		background-image: url(../../img/program/icon/chair.svg);
+	}
+
+	&--dumbbells::before {
+		background-image: url(../../img/program/icon/dumbbells.svg);
+	}
+}
+
+@media (min-width: @min-md) {
+	.program__flex-md {
+		display: flex;
+		gap: 20px;
+	}
+
+	.program__description-list-wrap,
+	.inventory-wrap {
+		width: 100%;
+		max-width: 520px;
+	}
 }
