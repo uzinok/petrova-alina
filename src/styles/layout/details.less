@@ -1,0 +1,29 @@
+.details {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid var(--bg-light);
+	border-radius: 10px;
+}
+
+.details__summary::-webkit-details-marker {
+	display: none;
+}
+
+.details__summary {
+	display: flex;
+	align-items: center;
+	padding: 6px 20px 6px 40px;
+	list-style: none;
+	color: var(--color-light-text);
+	background-color: var(--bg-dark);
+	border-radius: 10px;
+
+	& span {
+		margin-right: auto;
+	}
+}
+
+.details[open] .details__summary {
+	border-radius: 10px 10px 0 0;
+}
