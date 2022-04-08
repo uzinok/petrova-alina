@@ -140,10 +140,11 @@
 	border: 1px solid var(--color-light-text);
 	border-radius: 7px;
 
-	@media (max-width: @max-md) {
-		margin-right: calc((var(--offset-page) - 5px) * -1);
+	@media (max-width: @max-lg) {
+		width: calc(100% - 10px);
+		margin-right: 5px;
 		margin-bottom: 5px;
-		margin-left: calc((var(--offset-page) - 5px) * -1);
+		margin-left: 5px;
 	}
 
 	& h2 {
@@ -173,16 +174,18 @@
 
 .inventory-wrap {
 	position: relative;
+	display: flex;
+	flex-wrap: wrap;
 	padding-top: 16px;
 	padding-bottom: 20px;
 	background-color: var(--color-light-text);
 
 	@media (max-width: @max-md) {
-		margin-right: calc(var(--offset-page) * -1);
-		margin-left: calc(var(--offset-page) * -1);
+		border-radius: 0;
 	}
 
 	& h2 {
+		align-self: flex-start;
 		margin: 0;
 		color: var(--color-dark-text);
 	}
@@ -201,8 +204,9 @@
 	scroll-snap-align: center;
 }
 
-.inventory-list {
-	margin-top: 1em;
+.inventory-list-wrap {
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 button.inventory-button {
@@ -284,15 +288,86 @@ button.inventory-button--next {
 	}
 }
 
-@media (min-width: @min-md) {
-	.program__flex-md {
-		display: flex;
+.program__description-content {
+	display: flex;
+	@media (max-width: @max-lg){flex-direction: column;
+	align-items: center;
+	width: calc(100% + var(--offset-page) * 2);
+	margin-left: calc(var(--offset-page) * -1);}
+
+	@media (min-width: @min-lg) {
+		flex-direction: row;
 		gap: 20px;
 	}
 
-	.program__description-list-wrap,
-	.inventory-wrap {
+	@media (min-width: @min-lg) {
+		order: 1;
+		margin-bottom: 40px;
+	}
+}
+
+.program__description-list-wrap,
+.inventory-wrap {
+	width: 100%;
+	max-width: 520px;
+	border-radius: 7px;
+}
+
+
+.schedule-list {
+	display: flex;
+	width: fit-content;
+	margin: 0 auto;
+	padding: 18px 0 40px;
+	list-style-type: none;
+}
+
+.schedule-item {
+	box-sizing: border-box;
+	width: 106px;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-align: center;
+
+	& dl,
+	& dd {
+		margin: 0;
+	}
+
+	@media (min-width: @min-lg) {
+		width: 160px;
+	}
+}
+
+.icon-schedule {
+
+	&::before {
+		content: '';
+		display: block;
 		width: 100%;
-		max-width: 520px;
+		height: 100px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	&--extension::before {
+		background-image: url(../../img/program/extension.png);
+		background-position: center top;
+	}
+
+	&--workout::before {
+		background-image: url(../../img/program/workout.png);
+	}
+
+	&--warmup::before {
+		background-image: url(../../img/program/warmup.png);
+	}
+}
+
+@media (min-width: @min-lg) {
+	.program__description {
+		display: flex;
+		flex-direction: column;
 	}
 }
