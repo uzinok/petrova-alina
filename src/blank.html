@@ -24,17 +24,24 @@
 
 			<div class="blank">
 
-				<details class="details">
-					<summary class="details__summary">
+				<div class="details">
+					<h3 class="details__summary" id="details-1">
 						<span>День 1</span>
-						<input type="checkbox" name="name" id="id34343">
-					</summary>
+						<label>
+							<input type="checkbox" name="name" id="id34343">
+							Выполнено
+						</label>
+						<button class="details__toggle" aria-expanded="false">
+							показать
+							<span class="visually-hidden">показать.</span>
+						</button>
+					</h3>
 
-					<div class="details_content">
+					<div class="details__content" role="region" aria-labelledby="details-1">
 						<p>This is text.</p>
 					</div>
 
-				</details>
+				</div>
 
 				<!-- card-program Любитель-->
 				<div class="card-program">
