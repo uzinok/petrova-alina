@@ -125,6 +125,32 @@ if (document.querySelector('.details')) {
   var arrDetails = document.querySelectorAll('.details'); // перебираем все спойлееры для получения необходимых элементов и прослушивания событий
 
   for (var _i2 = 0; _i2 < arrDetails.length; _i2++) {
-    arrDetails[_i2];
+    var toggleButton = arrDetails[_i2].querySelector('.details__toggle');
+
+    if (toggleButton.getAttribute('aria-expanded') == 'false') {
+      arrDetails[_i2].classList.add('details--hidde');
+
+      toggleButton.setAttribute('aria-label', 'Показать.');
+    } else {
+      arrDetails[_i2].classList.add('details--visible');
+
+      toggleButton.setAttribute('aria-label', 'Скрыть.');
+    }
+
+    console.log(arrDetails[_i2].querySelector('.details__toggle'));
+
+    arrDetails[_i2].querySelector('.details__toggle').addEventListener('click', function () {
+      this.parentNode.parentNode.classList.toggle('details--hidde');
+      this.parentNode.parentNode.classList.toggle('details--visible');
+
+      if (this.getAttribute('aria-expanded') == 'true') {
+        this.setAttribute('aria-expanded', false);
+        this.setAttribute('aria-label', 'Показать.');
+        return;
+      }
+
+      this.setAttribute('aria-expanded', true);
+      this.setAttribute('aria-label', 'Скрыть.');
+    });
   }
 }
