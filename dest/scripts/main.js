@@ -141,8 +141,6 @@ if (document.querySelector('.details')) {
       var content = this.parentNode.parentNode.querySelector('.details__content');
       content.classList.remove('details__content--hidde');
       setTimeout(function () {
-        console.log(content);
-
         _this.parentNode.parentNode.classList.toggle('details--hidde');
       }, 10);
 
@@ -150,7 +148,6 @@ if (document.querySelector('.details')) {
         this.setAttribute('aria-expanded', false);
         this.setAttribute('aria-label', 'Показать.');
         setTimeout(function () {
-          console.log(content);
           content.classList.toggle('details__content--hidde');
         }, 200);
         return;
