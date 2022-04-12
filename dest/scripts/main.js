@@ -132,20 +132,27 @@ if (document.querySelector('.details')) {
 
       toggleButton.setAttribute('aria-label', 'Показать.');
     } else {
-      arrDetails[_i2].classList.add('details--visible');
-
       toggleButton.setAttribute('aria-label', 'Скрыть.');
     }
 
-    console.log(arrDetails[_i2].querySelector('.details__toggle'));
-
     arrDetails[_i2].querySelector('.details__toggle').addEventListener('click', function () {
-      this.parentNode.parentNode.classList.toggle('details--hidde');
-      this.parentNode.parentNode.classList.toggle('details--visible');
+      var _this = this;
+
+      var content = this.parentNode.parentNode.querySelector('.details__content');
+      content.classList.remove('details__content--hidde');
+      setTimeout(function () {
+        console.log(content);
+
+        _this.parentNode.parentNode.classList.toggle('details--hidde');
+      }, 10);
 
       if (this.getAttribute('aria-expanded') == 'true') {
         this.setAttribute('aria-expanded', false);
         this.setAttribute('aria-label', 'Показать.');
+        setTimeout(function () {
+          console.log(content);
+          content.classList.toggle('details__content--hidde');
+        }, 200);
         return;
       }
 

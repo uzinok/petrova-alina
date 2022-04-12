@@ -28,26 +28,18 @@
 .details__content {
 	max-height: 100vh;
 	opacity: 1;
+	transition: max-height var(--transition), opacity var(--transition);
+
+	& p {
+		margin: 0;
+	}
 }
 
 .details--hidde .details__content {
+	max-height: 0;
+	opacity: 0;
+}
+
+.details__content--hidde {
 	display: none;
-}
-
-.details--visible .details__content {
-	animation: details-visible var(--transition);
-
-}
-
-@keyframes details-visible {
-	0% {
-		display: block;
-		max-height: 0;
-		opacity: 0;
-	}
-
-	100% {
-		max-height: 100vh;
-		opacity: 1;
-	}
 }

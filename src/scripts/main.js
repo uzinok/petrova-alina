@@ -148,20 +148,28 @@ if (document.querySelector('.details')) {
 			arrDetails[i].classList.add('details--hidde');
 			toggleButton.setAttribute('aria-label', 'Показать.');
 		} else {
-			arrDetails[i].classList.add('details--visible');
 			toggleButton.setAttribute('aria-label', 'Скрыть.');
 		}
 
-		console.log(arrDetails[i].querySelector('.details__toggle'));
-		arrDetails[i].querySelector('.details__toggle').addEventListener('click', function() {
-			this.parentNode.parentNode.classList.toggle('details--hidde');
-			this.parentNode.parentNode.classList.toggle('details--visible');
+		arrDetails[i].querySelector('.details__toggle').addEventListener('click', function () {
+			const content = this.parentNode.parentNode.querySelector('.details__content');
+			content.classList.remove('details__content--hidde');
+			setTimeout(() => {
+					console.log(content);
+					this.parentNode.parentNode.classList.toggle('details--hidde');
+				}, 10)
 
 			if (this.getAttribute('aria-expanded') == 'true') {
 				this.setAttribute('aria-expanded', false);
 				this.setAttribute('aria-label', 'Показать.');
+
+				setTimeout(() => {
+					console.log(content);
+					content.classList.toggle('details__content--hidde');
+				}, 200)
 				return;
 			}
+
 			this.setAttribute('aria-expanded', true);
 			this.setAttribute('aria-label', 'Скрыть.');
 		});
