@@ -4,6 +4,12 @@
 	width: 100%;
 	border: 1px solid var(--bg-light);
 	border-radius: 10px;
+
+	@media (max-width: @max-lg) {
+		width: calc(var(--offset-page)*2 + 100%);
+		margin-right: calc(var(--offset-page)*-1);
+		margin-left: calc(var(--offset-page)*-1);
+	}
 }
 
 .details__summary {
@@ -16,12 +22,7 @@
 	color: var(--bg-body);
 	background-color: var(--bg-dark);
 	border-radius: 10px 10px 0 0;
-	transition: border-radius var(--transition);
-
-	@media (max-width: @max-lg) {
-		margin-right: calc(var(--offset-page)*-1);
-		margin-left: calc(var(--offset-page)*-1);
-	}
+	transition: border-radius var(--transition-delay) var(--transition-timing-function);
 
 	@media (min-width: @min-lg) {
 		font-size: 15px;
@@ -43,7 +44,7 @@
 .details__content {
 	max-height: 100vh;
 	opacity: 1;
-	transition: max-height var(--transition), opacity var(--transition);
+	transition: max-height var(--transition-delay) var(--transition-timing-function), opacity var(--transition-delay) var(--transition-timing-function);
 
 	& p {
 		margin: 0;
@@ -70,7 +71,7 @@
 	border: 0;
 	transform: translateY(-50%);
 	opacity: 0.4;
-	transition: opacity var(--transition);
+	transition: opacity var(--transition-delay) var(--transition-timing-function);
 	appearance: none;
 
 	&:hover {
@@ -90,7 +91,7 @@
 	}
 
 	&::after {
-		transition: width var(--transition), height var(--transition);
+		transition: width var(--transition-delay) var(--transition-timing-function), height var(--transition-delay) var(--transition-timing-function);
 	}
 }
 
@@ -105,9 +106,9 @@
 	display: flex;
 	align-items: center;
 	font-size: 20px;
-	font-family: var(--font-bebas);
+	font-family: var(--font-heading);
 	opacity: 0.4;
-	transition: opacity var(--transition);
+	transition: opacity var(--transition-delay) var(--transition-timing-function);
 
 	@media (min-width: @min-lg) {
 		font-size: 24px;
@@ -144,7 +145,7 @@
 		border-top-width: 0;
 		border-left-width: 0;
 		transform: rotate(45deg);
-		transition: border var(--transition);
+		transition: border var(--transition-delay) var(--transition-timing-function);
 	}
 }
 

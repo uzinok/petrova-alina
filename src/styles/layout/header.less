@@ -28,7 +28,7 @@
 	background-image: url(../../img/icon/page-header-toggle.svg);
 	border: 0;
 	box-shadow: none;
-	transition: opacity var(--transition);
+	transition: opacity var(--transition-delay) var(--transition-timing-function);
 
 	@media (max-width: @max-xl) {
 		position: absolute;
@@ -97,12 +97,12 @@
 	margin: 0;
 	font-weight: 700;
 	font-size: 20px;
-	font-family: var(--font-bebas);
+	font-family: var(--font-heading);
 	color: var(--color-light-text);
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 2px;
-	transition: opacity var(--transition);
+	transition: opacity var(--transition-delay) var(--transition-timing-function);
 
 	&:hover {
 		opacity: 0.7;
@@ -130,13 +130,13 @@
 
 .page-header__user-exit {
 	font-size: 20px;
-	font-family: var(--font-bebas);
+	font-family: var(--font-heading);
 	color: #7b7682;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 2px;
 	border-bottom: 1px dashed #7b7682;
-	transition: opacity var(--transition);
+	transition: opacity var(--transition-delay) var(--transition-timing-function);
 
 	&:hover {
 		opacity: 0.7;
@@ -171,7 +171,7 @@
 
 	& svg {
 		margin-right: 32px;
-		transition: transform var(--transition), fill var(--transition);
+		transition: transform var(--transition-delay) var(--transition-timing-function), fill var(--transition-delay) var(--transition-timing-function);
 		fill: var(--color-text);
 	}
 
@@ -181,7 +181,7 @@
 		font-size: 26px;
 		line-height: 28px;
 		padding: 11px 0;
-		font-family: var(--font-bebas);
+		font-family: var(--font-heading);
 		color: var(--color-light-text);
 		text-decoration: none;
 		letter-spacing: 2px;
@@ -274,7 +274,7 @@
 		position: fixed;
 		display: block;
 		width: 110px;
-		transition: width var(--transition);
+		transition: width var(--transition-delay) var(--transition-timing-function);
 	}
 	.page-header__open {
 		width: 400px;

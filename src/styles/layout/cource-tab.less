@@ -41,7 +41,7 @@
 	background: var(--bg-body);
 	border-radius: 20px;
 	box-shadow: 0 6px 18px var(--color-light-text);
-	transition: background var(--transition);
+	transition: background var(--transition-delay) var(--transition-timing-function);
 
 	@media (min-width: @min-md) {
 		min-height: 100px;
@@ -56,7 +56,7 @@
 		width: auto;
 		height: 100%;
 		opacity: 0;
-		transition: opacity var(--transition), fill var(--transition);
+		transition: opacity var(--transition-delay) var(--transition-timing-function), fill var(--transition-delay) var(--transition-timing-function);
 	}
 
 	&:hover svg {
