@@ -2,6 +2,7 @@
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
+	margin-bottom: 30px;
 	border: 1px solid var(--bg-light);
 	border-radius: 10px;
 
@@ -16,6 +17,8 @@
 	position: relative;
 	display: flex;
 	align-items: center;
+	min-height: 50px;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 6px 96px 6px 40px;
 	font-size: 12px;
@@ -190,4 +193,17 @@
 	margin-bottom: 30px;
 	color: var(--color-dark-text);
 	border-color: var(--bg-dark);
+}
+
+.details__toggle:disabled {
+	background-image: url(../../img/icon/lock.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	opacity: 1;
+
+	&::before,
+	&::after {
+		display: none;
+	}
 }
