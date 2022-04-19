@@ -10,6 +10,7 @@
 
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="./library/swiper-8.0.7/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./library/bolt-popup/bolt-popup.css">
 </head>
 
 <body>
@@ -173,7 +174,7 @@
 							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
 						</div>
 
-						<button type="button" class="details__btn btn">Полная программа</button>
+						<button type="button" class="details__btn btn" dada-target-popup="popup-day-1">Полная программа</button>
 
 					</div>
 					<!-- ./details__content -->
@@ -242,7 +243,7 @@
 							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
 						</div>
 
-						<button type="button" class="details__btn btn">Полная программа</button>
+						<button type="button" class="details__btn btn" dada-target-popup="popup-day-2">Полная программа</button>
 
 					</div>
 					<!-- ./details__content -->
@@ -256,11 +257,7 @@
 					</h3>
 
 					<!-- details__content -->
-					<div class="details__content details__content--hidde" role="region" aria-labelledby="details-2">
-
-						<button type="button" class="details__btn btn">Полная программа</button>
-
-					</div>
+					<div class="details__content details__content--hidde" role="region" aria-labelledby="details-2"></div>
 					<!-- ./details__content -->
 				</div>
 
@@ -274,6 +271,22 @@
 
 			</div>
 			<!-- ./program -->
+
+			<!-- popup -->
+			<div class="bolt-popup" role="dialog" dada-path-popup="popup-day-1">
+				<div class="bolt-popup__container">
+					<button class="bolt-popup__close" aria-label="Close"></button>
+					<p>Обдав его удушающей пылью, множество ярких фаэтонов исчезло из цирка.</p>
+				</div>
+			</div>
+
+			<div class="bolt-popup" role="dialog" dada-path-popup="popup-day-2">
+				<div class="bolt-popup__container">
+					<button class="bolt-popup__close" aria-label="Close"></button>
+					<p>Обдав его удушающей пылью, множество ярких фаэтонов исчезло из цирка.</p>
+				</div>
+			</div>
+			<!-- ./popup -->
 		</main>
 
 	</div>
@@ -293,7 +306,12 @@
 		});
 
 		swiper.allowSlidePrev = true;
-	</script>
+		</script>
+		<script src="./library/bolt-popup/bolt-popup.min.js"></script>
+		<script>
+			const popup1 = new BoltPopup(document.querySelector('[dada-path-popup="popup-day-1"]'));
+			// const popup2 = new BoltPopup(document.querySelector('[dada-path-popup="popup-day-2"]'));
+		</script>
 
 	<script src="scripts/main.min.js"></script>
 
