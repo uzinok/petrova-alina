@@ -140,16 +140,19 @@ if (document.querySelector('.details')) {
 
       var content = this.parentNode.parentNode.querySelector('.details__content');
       content.classList.remove('details__content--hidde');
+      var styles = getComputedStyle(document.documentElement);
+      var transitionDelay = styles.getPropertyValue('--transition-delay');
+      console.log(transitionDelay);
       setTimeout(function () {
         _this.parentNode.parentNode.classList.toggle('details--hidde');
-      }, 10);
+      }, transitionDelay);
 
       if (this.getAttribute('aria-expanded') == 'true') {
         this.setAttribute('aria-expanded', false);
         this.setAttribute('aria-label', 'Показать.');
         setTimeout(function () {
           content.classList.toggle('details__content--hidde');
-        }, 200);
+        }, transitionDelay);
         return;
       }
 

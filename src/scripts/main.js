@@ -154,9 +154,14 @@ if (document.querySelector('.details')) {
 		arrDetails[i].querySelector('.details__toggle').addEventListener('click', function() {
 			const content = this.parentNode.parentNode.querySelector('.details__content');
 			content.classList.remove('details__content--hidde');
+
+			const styles = getComputedStyle(document.documentElement);
+			const transitionDelay = styles.getPropertyValue('--transition-delay');
+			console.log(transitionDelay);
+
 			setTimeout(() => {
 				this.parentNode.parentNode.classList.toggle('details--hidde');
-			}, 10)
+			}, transitionDelay);
 
 			if (this.getAttribute('aria-expanded') == 'true') {
 				this.setAttribute('aria-expanded', false);
@@ -164,7 +169,7 @@ if (document.querySelector('.details')) {
 
 				setTimeout(() => {
 					content.classList.toggle('details__content--hidde');
-				}, 200)
+				}, transitionDelay);
 				return;
 			}
 
