@@ -178,3 +178,5 @@ if (document.querySelector('.details')) {
 		});
 	}
 }
+
+// loader video

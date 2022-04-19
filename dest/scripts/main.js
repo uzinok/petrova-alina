@@ -160,4 +160,4 @@ if (document.querySelector('.details')) {
       this.setAttribute('aria-label', 'Скрыть.');
     });
   }
-}
+} // loader video
