@@ -121,43 +121,66 @@ if (document.querySelector('.form__social--js')) {
 
 
 if (document.querySelector('.details')) {
-  // ролучаем все спойлеры
-  var arrDetails = document.querySelectorAll('.details'); // перебираем все спойлееры для получения необходимых элементов и прослушивания событий
+  (function () {
+    // ролучаем все спойлеры
+    var arrDetails = document.querySelectorAll('.details'); // перебираем все спойлееры для получения необходимых элементов и прослушивания событий
 
-  for (var _i2 = 0; _i2 < arrDetails.length; _i2++) {
-    var toggleButton = arrDetails[_i2].querySelector('.details__toggle');
+    var _loop = function _loop(_i2) {
+      var toggleButton = arrDetails[_i2].querySelector('.details__toggle');
 
-    if (toggleButton.getAttribute('aria-expanded') == 'false') {
-      arrDetails[_i2].classList.add('details--hidde');
+      if (toggleButton.getAttribute('aria-expanded') == 'false') {
+        arrDetails[_i2].classList.add('details--hidde');
 
-      toggleButton.setAttribute('aria-label', 'Показать.');
-    } else {
-      toggleButton.setAttribute('aria-label', 'Скрыть.');
-    }
-
-    arrDetails[_i2].querySelector('.details__toggle').addEventListener('click', function () {
-      var _this = this;
-
-      var content = this.parentNode.parentNode.querySelector('.details__content');
-      content.classList.remove('details__content--hidde');
-      var styles = getComputedStyle(document.documentElement);
-      var transitionDelay = styles.getPropertyValue('--transition-delay');
-      console.log(transitionDelay);
-      setTimeout(function () {
-        _this.parentNode.parentNode.classList.toggle('details--hidde');
-      }, transitionDelay);
-
-      if (this.getAttribute('aria-expanded') == 'true') {
-        this.setAttribute('aria-expanded', false);
-        this.setAttribute('aria-label', 'Показать.');
-        setTimeout(function () {
-          content.classList.toggle('details__content--hidde');
-        }, transitionDelay);
-        return;
+        toggleButton.setAttribute('aria-label', 'Показать.');
+      } else {
+        toggleButton.setAttribute('aria-label', 'Скрыть.');
       }
 
-      this.setAttribute('aria-expanded', true);
-      this.setAttribute('aria-label', 'Скрыть.');
-    });
-  }
+      arrDetails[_i2].querySelector('.details__toggle').addEventListener('click', function () {
+        var _this = this;
+
+        var content = this.parentNode.parentNode.querySelector('.details__content');
+        content.classList.remove('details__content--hidde');
+        var styles = getComputedStyle(document.documentElement);
+        var transitionDelay = styles.getPropertyValue('--transition-delay');
+        setTimeout(function () {
+          _this.parentNode.parentNode.classList.toggle('details--hidde');
+        }, transitionDelay);
+
+        if (this.getAttribute('aria-expanded') == 'true') {
+          this.setAttribute('aria-expanded', false);
+          this.setAttribute('aria-label', 'Показать.');
+          setTimeout(function () {
+            content.classList.toggle('details__content--hidde');
+          }, transitionDelay);
+          return;
+        }
+
+        this.setAttribute('aria-expanded', true);
+        this.setAttribute('aria-label', 'Скрыть.');
+
+        if (arrDetails[_i2].querySelectorAll('img.video__media')) {
+          arrDetails[_i2].querySelectorAll('.video').forEach(function (elem) {
+            loaderVideo(elem);
+          });
+        }
+      });
+    };
+
+    for (var _i2 = 0; _i2 < arrDetails.length; _i2++) {
+      _loop(_i2);
+    }
+  })();
 } // loader video
+
+
+function loaderVideo(video) {
+  console.log(video);
+  var iframe = document.createElement('iframe');
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('allow', 'autoplay');
+  iframe.setAttribute('src', video.querySelector('.video__link').getAttribute('data-iframe'));
+  iframe.classList.add('video__media');
+  console.log(video.querySelector('.video__link'));
+  video.append(iframe);
+}

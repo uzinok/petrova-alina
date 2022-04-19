@@ -157,7 +157,6 @@ if (document.querySelector('.details')) {
 
 			const styles = getComputedStyle(document.documentElement);
 			const transitionDelay = styles.getPropertyValue('--transition-delay');
-			console.log(transitionDelay);
 
 			setTimeout(() => {
 				this.parentNode.parentNode.classList.toggle('details--hidde');
@@ -175,8 +174,27 @@ if (document.querySelector('.details')) {
 
 			this.setAttribute('aria-expanded', true);
 			this.setAttribute('aria-label', 'Скрыть.');
+
+			if (arrDetails[i].querySelectorAll('img.video__media')) {
+				arrDetails[i].querySelectorAll('.video').forEach(elem => {
+					loaderVideo(elem);
+				});
+			}
 		});
 	}
 }
 
 // loader video
+
+function loaderVideo(video) {
+	console.log(video);
+
+	let iframe = document.createElement('iframe');
+
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', video.querySelector('.video__link').getAttribute('data-iframe'));
+	iframe.classList.add('video__media');
+console.log(video.querySelector('.video__link'));
+	video.append(iframe);
+}

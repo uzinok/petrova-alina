@@ -128,9 +128,6 @@
 						<div class="details__card">
 							<h4>Разминка</h4>
 							<div class="details__video video">
-								<!-- <a href="https://www.youtube.com/watch?v=4YwTlMAWjX4" aria-label="Перейти на сайт видео."></a> -->
-								<!-- <iframe src="https://www.youtube.com/embed/4YwTlMAWjX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
 								<a class="video__link" href="https://youtu.be/PbfFwdinvRo" target="_blank" data-iframe="https://www.youtube.com/embed/4YwTlMAWjX4">
 									<img class="video__media" src="img/fading-loader.svg" alt="#">
 								</a>
@@ -146,16 +143,32 @@
 
 						<div class="details__card">
 							<h4>Тренировка</h4>
-							<div class="video">
-								<iframe src="https://player.vimeo.com/video/678832242?h=73dd116018" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+							<div class="details__video video">
+								<a class="video__link" href="https://player.vimeo.com/video/678832242?h=73dd116018" target="_blank" data-iframe="https://player.vimeo.com/video/678832242?h=73dd116018">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
 							</div>
 							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила.</p>
 						</div>
 
 						<div class="details__card">
 							<h4>Растяжка</h4>
-							<div class="video">
-								<iframe src="https://www.youtube.com/embed/-Yfyuq2tsHY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<div class="details__video video">
+								<a class="video__link" href="https://www.youtube.com/watch?v=-Yfyuq2tsHY" target="_blank" data-iframe="https://www.youtube.com/embed/-Yfyuq2tsHY">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
 							</div>
 							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
 						</div>
@@ -165,6 +178,283 @@
 					</div>
 					<!-- ./details__content -->
 				</div>
+
+				<div class="details">
+					<h3 class="details__summary">
+						<span class="details__day">День 1</span>
+						<label class="details__done">
+							<input type="checkbox" name="name" class="details__done-input visually-hidden" checked>
+							<span class="details__done-checkbox-view"></span>
+							Выполнено
+						</label>
+						<button class="details__toggle" aria-expanded="false" id="details-1" aria-label="Показать.">
+						</button>
+					</h3>
+
+					<!-- details__content -->
+					<div class="details__content details__content--hidde" role="region" aria-labelledby="details-1">
+
+						<div class="details__card">
+							<h4>Разминка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://youtu.be/PbfFwdinvRo" target="_blank" data-iframe="https://www.youtube.com/embed/4YwTlMAWjX4">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
+						</div>
+
+						<div class="details__card">
+							<h4>Тренировка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://player.vimeo.com/video/678832242?h=73dd116018" target="_blank" data-iframe="https://player.vimeo.com/video/678832242?h=73dd116018">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила.</p>
+						</div>
+
+						<div class="details__card">
+							<h4>Растяжка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://www.youtube.com/watch?v=-Yfyuq2tsHY" target="_blank" data-iframe="https://www.youtube.com/embed/-Yfyuq2tsHY">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
+						</div>
+
+						<button type="button" class="details__btn btn">Полная программа</button>
+
+					</div>
+					<!-- ./details__content -->
+				</div>
+
+				<div class="details">
+					<h3 class="details__summary">
+						<span class="details__day">День 1</span>
+						<label class="details__done">
+							<input type="checkbox" name="name" class="details__done-input visually-hidden" checked>
+							<span class="details__done-checkbox-view"></span>
+							Выполнено
+						</label>
+						<button class="details__toggle" aria-expanded="false" id="details-1" aria-label="Показать.">
+						</button>
+					</h3>
+
+					<!-- details__content -->
+					<div class="details__content details__content--hidde" role="region" aria-labelledby="details-1">
+
+						<div class="details__card">
+							<h4>Разминка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://youtu.be/PbfFwdinvRo" target="_blank" data-iframe="https://www.youtube.com/embed/4YwTlMAWjX4">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
+						</div>
+
+						<div class="details__card">
+							<h4>Тренировка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://player.vimeo.com/video/678832242?h=73dd116018" target="_blank" data-iframe="https://player.vimeo.com/video/678832242?h=73dd116018">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила.</p>
+						</div>
+
+						<div class="details__card">
+							<h4>Растяжка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://www.youtube.com/watch?v=-Yfyuq2tsHY" target="_blank" data-iframe="https://www.youtube.com/embed/-Yfyuq2tsHY">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
+						</div>
+
+						<button type="button" class="details__btn btn">Полная программа</button>
+
+					</div>
+					<!-- ./details__content -->
+				</div>
+
+				<div class="details">
+					<h3 class="details__summary">
+						<span class="details__day">День 1</span>
+						<label class="details__done">
+							<input type="checkbox" name="name" class="details__done-input visually-hidden" checked>
+							<span class="details__done-checkbox-view"></span>
+							Выполнено
+						</label>
+						<button class="details__toggle" aria-expanded="false" id="details-1" aria-label="Показать.">
+						</button>
+					</h3>
+
+					<!-- details__content -->
+					<div class="details__content details__content--hidde" role="region" aria-labelledby="details-1">
+
+						<div class="details__card">
+							<h4>Разминка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://youtu.be/PbfFwdinvRo" target="_blank" data-iframe="https://www.youtube.com/embed/4YwTlMAWjX4">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
+						</div>
+
+						<div class="details__card">
+							<h4>Тренировка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://player.vimeo.com/video/678832242?h=73dd116018" target="_blank" data-iframe="https://player.vimeo.com/video/678832242?h=73dd116018">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила.</p>
+						</div>
+
+						<div class="details__card">
+							<h4>Растяжка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://www.youtube.com/watch?v=-Yfyuq2tsHY" target="_blank" data-iframe="https://www.youtube.com/embed/-Yfyuq2tsHY">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
+						</div>
+
+						<button type="button" class="details__btn btn">Полная программа</button>
+
+					</div>
+					<!-- ./details__content -->
+				</div>
+
+				<div class="details">
+					<h3 class="details__summary">
+						<span class="details__day">День 1</span>
+						<label class="details__done">
+							<input type="checkbox" name="name" class="details__done-input visually-hidden" checked>
+							<span class="details__done-checkbox-view"></span>
+							Выполнено
+						</label>
+						<button class="details__toggle" aria-expanded="false" id="details-1" aria-label="Показать.">
+						</button>
+					</h3>
+
+					<!-- details__content -->
+					<div class="details__content details__content--hidde" role="region" aria-labelledby="details-1">
+
+						<div class="details__card">
+							<h4>Разминка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://youtu.be/PbfFwdinvRo" target="_blank" data-iframe="https://www.youtube.com/embed/4YwTlMAWjX4">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
+						</div>
+
+						<div class="details__card">
+							<h4>Тренировка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://player.vimeo.com/video/678832242?h=73dd116018" target="_blank" data-iframe="https://player.vimeo.com/video/678832242?h=73dd116018">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила.</p>
+						</div>
+
+						<div class="details__card">
+							<h4>Растяжка</h4>
+							<div class="details__video video">
+								<a class="video__link" href="https://www.youtube.com/watch?v=-Yfyuq2tsHY" target="_blank" data-iframe="https://www.youtube.com/embed/-Yfyuq2tsHY">
+									<img class="video__media" src="img/fading-loader.svg" alt="#">
+								</a>
+								<button class="video__button" aria-label="Запустить видео">
+									<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+										<path class="video__case" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+										<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+									</svg>
+								</button>
+							</div>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То рукописи переулка предупредила, заглавных путь по всей коварных последний ручеек?</p>
+						</div>
+
+						<button type="button" class="details__btn btn">Полная программа</button>
+
+					</div>
+					<!-- ./details__content -->
+				</div>
+
 			</div>
 			<!-- ./program -->
 		</main>
