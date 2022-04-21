@@ -246,14 +246,17 @@ if (document.querySelector('.details')) {
 // loader video
 
 function loaderVideo(video) {
-	console.log(video);
+	const videoLink = video.querySelector('.video__link');
 
-	let iframe = document.createElement('iframe');
+	if (videoLink) {
+		const iframe = document.createElement('iframe');
 
-	iframe.setAttribute('allowfullscreen', '');
-	iframe.setAttribute('allow', 'autoplay');
-	iframe.setAttribute('src', video.querySelector('.video__link').getAttribute('data-iframe'));
-	iframe.classList.add('video__media');
-	console.log(video.querySelector('.video__link'));
-	video.append(iframe);
+		iframe.setAttribute('allowfullscreen', '');
+		iframe.setAttribute('allow', 'autoplay');
+		iframe.setAttribute('src', videoLink.getAttribute('data-iframe'));
+		iframe.classList.add('video__media');
+		video.append(iframe);
+
+		videoLink.remove();
+	}
 }
