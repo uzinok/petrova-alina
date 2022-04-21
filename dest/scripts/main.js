@@ -156,40 +156,7 @@ if (document.querySelector('.details')) {
           loaderVideo(elem);
         });
       }
-    }; // for (let i = 0; i < arrDetails.length; i++) {
-    // 	const toggleButton = arrDetails[i].querySelector('.details__toggle');
-    // 	if (toggleButton.getAttribute('aria-expanded') == 'false') {
-    // 		arrDetails[i].classList.add('details--hidde');
-    // 		toggleButton.setAttribute('aria-label', 'Показать.');
-    // 	} else {
-    // 		toggleButton.setAttribute('aria-label', 'Скрыть.');
-    // 	}
-    // 	arrDetails[i].querySelector('.details__toggle').addEventListener('click', function() {
-    // 		const content = this.parentNode.parentNode.querySelector('.details__content');
-    // 		content.classList.remove('details__content--hidde');
-    // 		const styles = getComputedStyle(document.documentElement);
-    // 		const transitionDelay = styles.getPropertyValue('--transition-delay');
-    // 		setTimeout(() => {
-    // 			this.parentNode.parentNode.classList.toggle('details--hidde');
-    // 		}, transitionDelay);
-    // 		if (this.getAttribute('aria-expanded') == 'true') {
-    // 			this.setAttribute('aria-expanded', false);
-    // 			this.setAttribute('aria-label', 'Показать.');
-    // 			setTimeout(() => {
-    // 				content.classList.toggle('details__content--hidde');
-    // 			}, transitionDelay);
-    // 			return;
-    // 		}
-    // 		this.setAttribute('aria-expanded', true);
-    // 		this.setAttribute('aria-label', 'Скрыть.');
-    // 		if (arrDetails[i].querySelectorAll('img.video__media')) {
-    // 			arrDetails[i].querySelectorAll('.video').forEach(elem => {
-    // 				loaderVideo(elem);
-    // 			});
-    // 		}
-    // 	});
-    // }
-
+    };
 
     // ролучаем все спойлеры
     var arrDetails = document.querySelectorAll('.details'); // перебираем все спойлееры для получения необходимых элементов и прослушивания событий
@@ -221,13 +188,12 @@ if (document.querySelector('.details')) {
 function loaderVideo(video) {
   var videoLink = video.querySelector('.video__link');
 
-  if (videoLink) {
+  if (!video.querySelector('iframe.video__media')) {
     var iframe = document.createElement('iframe');
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay');
     iframe.setAttribute('src', videoLink.getAttribute('data-iframe'));
     iframe.classList.add('video__media');
     video.append(iframe);
-    videoLink.remove();
   }
 }

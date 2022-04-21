@@ -150,7 +150,7 @@ if (document.querySelector('.details')) {
 			detailsClose(arrDetails[i]);
 		}
 
-		toggleButton.addEventListener('click', function() {
+		toggleButton.addEventListener('click', function () {
 			if (toggleButton.getAttribute('aria-expanded') == 'false') {
 				detailsOpen(arrDetails[i]);
 			} else {
@@ -200,47 +200,6 @@ if (document.querySelector('.details')) {
 			});
 		}
 	}
-	// for (let i = 0; i < arrDetails.length; i++) {
-	// 	const toggleButton = arrDetails[i].querySelector('.details__toggle');
-
-	// 	if (toggleButton.getAttribute('aria-expanded') == 'false') {
-	// 		arrDetails[i].classList.add('details--hidde');
-	// 		toggleButton.setAttribute('aria-label', 'Показать.');
-	// 	} else {
-	// 		toggleButton.setAttribute('aria-label', 'Скрыть.');
-	// 	}
-
-	// 	arrDetails[i].querySelector('.details__toggle').addEventListener('click', function() {
-	// 		const content = this.parentNode.parentNode.querySelector('.details__content');
-	// 		content.classList.remove('details__content--hidde');
-
-	// 		const styles = getComputedStyle(document.documentElement);
-	// 		const transitionDelay = styles.getPropertyValue('--transition-delay');
-
-	// 		setTimeout(() => {
-	// 			this.parentNode.parentNode.classList.toggle('details--hidde');
-	// 		}, transitionDelay);
-
-	// 		if (this.getAttribute('aria-expanded') == 'true') {
-	// 			this.setAttribute('aria-expanded', false);
-	// 			this.setAttribute('aria-label', 'Показать.');
-
-	// 			setTimeout(() => {
-	// 				content.classList.toggle('details__content--hidde');
-	// 			}, transitionDelay);
-	// 			return;
-	// 		}
-
-	// 		this.setAttribute('aria-expanded', true);
-	// 		this.setAttribute('aria-label', 'Скрыть.');
-
-	// 		if (arrDetails[i].querySelectorAll('img.video__media')) {
-	// 			arrDetails[i].querySelectorAll('.video').forEach(elem => {
-	// 				loaderVideo(elem);
-	// 			});
-	// 		}
-	// 	});
-	// }
 }
 
 // loader video
@@ -248,7 +207,7 @@ if (document.querySelector('.details')) {
 function loaderVideo(video) {
 	const videoLink = video.querySelector('.video__link');
 
-	if (videoLink) {
+	if (!video.querySelector('iframe.video__media')) {
 		const iframe = document.createElement('iframe');
 
 		iframe.setAttribute('allowfullscreen', '');
@@ -256,7 +215,5 @@ function loaderVideo(video) {
 		iframe.setAttribute('src', videoLink.getAttribute('data-iframe'));
 		iframe.classList.add('video__media');
 		video.append(iframe);
-
-		videoLink.remove();
 	}
 }

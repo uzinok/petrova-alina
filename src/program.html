@@ -273,25 +273,25 @@
 
 			</div>
 			<!-- ./program -->
-
-			<!-- popup -->
-			<div class="bolt-popup" role="dialog" dada-path-popup="popup-day-1">
-				<div class="bolt-popup__container">
-					<button class="bolt-popup__close" aria-label="Close"></button>
-					<p>Обдав его удушающей пылью, множество ярких фаэтонов исчезло из цирка.</p>
-				</div>
-			</div>
-
-			<div class="bolt-popup" role="dialog" dada-path-popup="popup-day-2">
-				<div class="bolt-popup__container">
-					<button class="bolt-popup__close" aria-label="Close"></button>
-					<p>Обдав его удушающей пылью, множество ярких фаэтонов исчезло из цирка.</p>
-				</div>
-			</div>
-			<!-- ./popup -->
 		</main>
 
 	</div>
+
+	<!-- popup -->
+	<div class="bolt-popup" role="dialog" dada-path-popup="popup-day-1">
+		<div class="bolt-popup__container">
+			<button class="bolt-popup__close" aria-label="Close"></button>
+			<p>Обдав его удушающей пылью, множество ярких фаэтонов исчезло из цирка.</p>
+		</div>
+	</div>
+
+	<div class="bolt-popup" role="dialog" dada-path-popup="popup-day-2">
+		<div class="bolt-popup__container">
+			<button class="bolt-popup__close" aria-label="Close"></button>
+			<p>Обдав его удушающей пылью, множество ярких фаэтонов исчезло из цирка.</p>
+		</div>
+	</div>
+	<!-- ./popup -->
 
 	{% include 'template/footer.html' %}
 
@@ -308,12 +308,12 @@
 		});
 
 		swiper.allowSlidePrev = true;
-		</script>
-		<script src="./library/bolt-popup/bolt-popup.min.js"></script>
-		<script>
-			const popup1 = new BoltPopup(document.querySelector('[dada-path-popup="popup-day-1"]'));
-			// const popup2 = new BoltPopup(document.querySelector('[dada-path-popup="popup-day-2"]'));
-		</script>
+	</script>
+	<script src="./library/bolt-popup/bolt-popup.min.js"></script>
+	<script>
+		const popup1 = new BoltPopup(document.querySelector('[dada-path-popup="popup-day-1"]'));
+		// const popup2 = new BoltPopup(document.querySelector('[dada-path-popup="popup-day-2"]'));
+	</script>
 
 	<script src="scripts/main.min.js"></script>
 
