@@ -17,8 +17,8 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	min-height: 50px;
 	box-sizing: border-box;
+	min-height: 50px;
 	margin: 0;
 	padding: 6px 96px 6px 40px;
 	font-size: 12px;
@@ -205,5 +205,30 @@
 	&::before,
 	&::after {
 		display: none;
+	}
+}
+
+.details__close {
+	grid-column-end: -1;
+	display: block;
+	width: fit-content;
+	margin-bottom: 15px;
+	margin-left: auto;
+	padding: 0;
+	font-weight: 700;
+	font-size: 22px;
+	font-family: var(--font-heading);
+	text-transform: uppercase;
+	background-color: transparent;
+	border: 0;
+	transition: opacity var(--transition-delay) var(--transition-timing-function);
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:focus,
+	&:active {
+		opacity: 0.5;
 	}
 }
