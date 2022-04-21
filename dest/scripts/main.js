@@ -122,47 +122,91 @@ if (document.querySelector('.form__social--js')) {
 
 if (document.querySelector('.details')) {
   (function () {
+    var detailsClose = function detailsClose(details) {
+      var toggleButton = details.querySelector('.details__toggle');
+      var content = details.querySelector('.details__content');
+      var styles = getComputedStyle(document.documentElement);
+      var transitionDelay = styles.getPropertyValue('--transition-delay');
+      toggleButton.setAttribute('aria-label', 'Показать.');
+      toggleButton.setAttribute('aria-expanded', false);
+      content.classList.add('details__content--hidde');
+      setTimeout(function () {
+        details.classList.add('details--hidde');
+      }, transitionDelay);
+    };
+
+    var detailsOpen = function detailsOpen(details) {
+      var toggleButton = details.querySelector('.details__toggle');
+      var closeButton = details.querySelector('.details__close');
+      var content = details.querySelector('.details__content');
+      var styles = getComputedStyle(document.documentElement);
+      var transitionDelay = styles.getPropertyValue('--transition-delay');
+      toggleButton.setAttribute('aria-label', 'Скрыть.');
+      toggleButton.setAttribute('aria-expanded', true);
+      content.classList.remove('details__content--hidde');
+      setTimeout(function () {
+        details.classList.remove('details--hidde');
+      }, transitionDelay);
+      closeButton.addEventListener('click', function () {
+        detailsClose(details);
+      });
+
+      if (details.querySelectorAll('img.video__media')) {
+        details.querySelectorAll('.video').forEach(function (elem) {
+          loaderVideo(elem);
+        });
+      }
+    }; // for (let i = 0; i < arrDetails.length; i++) {
+    // 	const toggleButton = arrDetails[i].querySelector('.details__toggle');
+    // 	if (toggleButton.getAttribute('aria-expanded') == 'false') {
+    // 		arrDetails[i].classList.add('details--hidde');
+    // 		toggleButton.setAttribute('aria-label', 'Показать.');
+    // 	} else {
+    // 		toggleButton.setAttribute('aria-label', 'Скрыть.');
+    // 	}
+    // 	arrDetails[i].querySelector('.details__toggle').addEventListener('click', function() {
+    // 		const content = this.parentNode.parentNode.querySelector('.details__content');
+    // 		content.classList.remove('details__content--hidde');
+    // 		const styles = getComputedStyle(document.documentElement);
+    // 		const transitionDelay = styles.getPropertyValue('--transition-delay');
+    // 		setTimeout(() => {
+    // 			this.parentNode.parentNode.classList.toggle('details--hidde');
+    // 		}, transitionDelay);
+    // 		if (this.getAttribute('aria-expanded') == 'true') {
+    // 			this.setAttribute('aria-expanded', false);
+    // 			this.setAttribute('aria-label', 'Показать.');
+    // 			setTimeout(() => {
+    // 				content.classList.toggle('details__content--hidde');
+    // 			}, transitionDelay);
+    // 			return;
+    // 		}
+    // 		this.setAttribute('aria-expanded', true);
+    // 		this.setAttribute('aria-label', 'Скрыть.');
+    // 		if (arrDetails[i].querySelectorAll('img.video__media')) {
+    // 			arrDetails[i].querySelectorAll('.video').forEach(elem => {
+    // 				loaderVideo(elem);
+    // 			});
+    // 		}
+    // 	});
+    // }
+
+
     // ролучаем все спойлеры
     var arrDetails = document.querySelectorAll('.details'); // перебираем все спойлееры для получения необходимых элементов и прослушивания событий
 
     var _loop = function _loop(_i2) {
+      // кнопка +/-
       var toggleButton = arrDetails[_i2].querySelector('.details__toggle');
 
       if (toggleButton.getAttribute('aria-expanded') == 'false') {
-        arrDetails[_i2].classList.add('details--hidde');
-
-        toggleButton.setAttribute('aria-label', 'Показать.');
-      } else {
-        toggleButton.setAttribute('aria-label', 'Скрыть.');
+        detailsClose(arrDetails[_i2]);
       }
 
-      arrDetails[_i2].querySelector('.details__toggle').addEventListener('click', function () {
-        var _this = this;
-
-        var content = this.parentNode.parentNode.querySelector('.details__content');
-        content.classList.remove('details__content--hidde');
-        var styles = getComputedStyle(document.documentElement);
-        var transitionDelay = styles.getPropertyValue('--transition-delay');
-        setTimeout(function () {
-          _this.parentNode.parentNode.classList.toggle('details--hidde');
-        }, transitionDelay);
-
-        if (this.getAttribute('aria-expanded') == 'true') {
-          this.setAttribute('aria-expanded', false);
-          this.setAttribute('aria-label', 'Показать.');
-          setTimeout(function () {
-            content.classList.toggle('details__content--hidde');
-          }, transitionDelay);
-          return;
-        }
-
-        this.setAttribute('aria-expanded', true);
-        this.setAttribute('aria-label', 'Скрыть.');
-
-        if (arrDetails[_i2].querySelectorAll('img.video__media')) {
-          arrDetails[_i2].querySelectorAll('.video').forEach(function (elem) {
-            loaderVideo(elem);
-          });
+      toggleButton.addEventListener('click', function () {
+        if (toggleButton.getAttribute('aria-expanded') == 'false') {
+          detailsOpen(arrDetails[_i2]);
+        } else {
+          detailsClose(arrDetails[_i2]);
         }
       });
     };
