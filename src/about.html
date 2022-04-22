@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="styles/main.css">
+	<meta name="robots" content="noindex, nofollow" />
+</head>
+
+<body>
+
+	<div class="page-grid">
+		{% include 'template/header.html' %}
+
+		<main class="page-main col">
+			<div>
+				<h1>О тренере</h1>
+			</div>
+		</main>
+
+	</div>
+
+	{% include 'template/footer.html' %}
+
+	<script src="scripts/main.min.js"></script>
+
+	<div style="display: none;">
+		{% include 'img/sprite.svg' %}
+	</div>
+
+	<a href="blank.html" style="position: fixed;bottom: 0;right: 0;">blank.html</a>
+</body>
+
+</html>
