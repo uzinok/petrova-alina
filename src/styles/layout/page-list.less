@@ -1,0 +1,21 @@
+.page-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.page-item {
+	position: relative;
+	padding-left: 20px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 6px;
+		left: 0;
+		width: 8px;
+		height: 8px;
+		background-color: var(--color-light-text);
+		border-radius: 50%;
+	}
+}
