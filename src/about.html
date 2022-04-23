@@ -9,6 +9,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="./library/swiper-8.0.7/swiper-bundle.min.css">
 	<meta name="robots" content="noindex, nofollow" />
 </head>
 
@@ -20,12 +21,99 @@
 		<main class="page-main col">
 			<div>
 				<h1>О тренере</h1>
+
+				<div class="about-wrap col">
+
+					<div class="swiper about-list-wrap no-js">
+						<div class="about-list swiper-wrapper">
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/2nd-regional-convention-2018.jpg" alt="Сертификат: '2я региональная конвенция 2018'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/3rd-regional-convention-2019.jpg" alt="Сертификат: '3я региональная конвенция 2019'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/4th-regional-convention-2019.jpg" alt="Сертификат: '4я региональная конвенция 2019'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/churkaev-2019.jpg" alt="Сертификат: 'Чурлаев 2019'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/ifaa-2018.jpg" alt="Сертификат: 'IFAA 2018'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/ifaa-2019.jpg" alt="Сертификат: 'IFAA 2019'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/mioff-2018.jpg" alt="Сертификат: 'MIOFF 2018'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/mioff-2019.jpg" alt="Сертификат: 'MIOFF 2019'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/mioff-2020.jpg" alt="Сертификат: 'MIOFF 2020'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/olymp+alex-fitness.jpg" alt="Сертификат: 'olymp+alex fitness'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/reformator-2019.jpg" alt="Сертификат: 'reformator-2019'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/smart-fit-2017.jpg" alt="Сертификат: 'smART-FIT 2017'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/smart-fit-2018.jpg" alt="Сертификат: 'smART-FIT 2018'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/smart-fit-2021.jpg" alt="Сертификат: 'smART-FIT 2021'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/x-fit-2018.jpg" alt="Сертификат: 'x-fit 2018'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/zebra-2018.jpg" alt="Сертификат: 'zebra 2018'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/koltovskaya-2017.jpg" alt="Сертификат: 'Колтовской 2017'">
+							</div>
+							<div class="about-item swiper-slide">
+								<img src="./img/certificate/university-fitness-2020.jpg" alt="Сертификат: 'Университет фитнеса 2020'">
+							</div>
+						</div>
+					</div>
+
+					<button class="about-button about-button--prev"></button>
+					<div class="swiper-pagination"></div>
+					<button class="about-button about-button--next"></button>
+
+				</div>
 			</div>
 		</main>
 
 	</div>
 
 	{% include 'template/footer.html' %}
+
+	<script src="./library/swiper-8.0.7/swiper-bundle.min.js"></script>
+	<script>
+		const swiper = new Swiper('.swiper', {
+			speed: 200,
+			centeredSlides: true,
+			spaceBetween: 30,
+			slidesPerView: 4,
+			navigation: {
+				nextEl: '.about-button--next',
+				prevEl: '.about-button--prev',
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				type: "fraction",
+			}
+		});
+
+		swiper.allowSlidePrev = true;
+	</script>
 
 	<script src="scripts/main.min.js"></script>
 
