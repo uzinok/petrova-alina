@@ -99,9 +99,9 @@
 	<script>
 		const swiper = new Swiper('.swiper', {
 			speed: 200,
-			centeredSlides: true,
 			spaceBetween: 30,
-			slidesPerView: 4,
+			slidesPerView: 1,
+			centeredSlides: true,
 			navigation: {
 				nextEl: '.about-button--next',
 				prevEl: '.about-button--prev',
@@ -109,6 +109,20 @@
 			pagination: {
 				el: ".swiper-pagination",
 				type: "fraction",
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				990: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 4,
+				}
 			}
 		});
 
