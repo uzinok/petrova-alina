@@ -117,68 +117,68 @@ if (document.querySelector('.form__social--js')) {
     activeInput.classList.add('form__social-input--active');
     activeInput.setAttribute('tabindex', 0);
   });
-} // details summary
+} // accordion summary
 
 
-if (document.querySelector('.details')) {
+if (document.querySelector('.accordion')) {
   (function () {
-    var detailsClose = function detailsClose(details) {
-      var toggleButton = details.querySelector('.details__toggle');
-      var content = details.querySelector('.details__content');
+    var accordionClose = function accordionClose(accordion) {
+      var toggleButton = accordion.querySelector('.accordion__toggle');
+      var content = accordion.querySelector('.accordion__content');
       var styles = getComputedStyle(document.documentElement);
       var transitionDelay = styles.getPropertyValue('--transition-delay');
       toggleButton.setAttribute('aria-label', 'Показать.');
       toggleButton.setAttribute('aria-expanded', false);
-      content.classList.add('details__content--hidde');
+      content.classList.add('accordion__content--hidde');
       setTimeout(function () {
-        details.classList.add('details--hidde');
+        accordion.classList.add('accordion--hidde');
       }, transitionDelay);
     };
 
-    var detailsOpen = function detailsOpen(details) {
-      var toggleButton = details.querySelector('.details__toggle');
-      var closeButton = details.querySelector('.details__close');
-      var content = details.querySelector('.details__content');
+    var accordionOpen = function accordionOpen(accordion) {
+      var toggleButton = accordion.querySelector('.accordion__toggle');
+      var closeButton = accordion.querySelector('.accordion__close');
+      var content = accordion.querySelector('.accordion__content');
       var styles = getComputedStyle(document.documentElement);
       var transitionDelay = styles.getPropertyValue('--transition-delay');
       toggleButton.setAttribute('aria-label', 'Скрыть.');
       toggleButton.setAttribute('aria-expanded', true);
-      content.classList.remove('details__content--hidde');
+      content.classList.remove('accordion__content--hidde');
       setTimeout(function () {
-        details.classList.remove('details--hidde');
+        accordion.classList.remove('accordion--hidde');
       }, transitionDelay);
       closeButton.addEventListener('click', function () {
-        detailsClose(details);
+        accordionClose(accordion);
       });
 
-      if (details.querySelectorAll('img.video__media')) {
-        details.querySelectorAll('.video').forEach(function (elem) {
+      if (accordion.querySelectorAll('img.video__media')) {
+        accordion.querySelectorAll('.video').forEach(function (elem) {
           loaderVideo(elem);
         });
       }
     };
 
     // ролучаем все спойлеры
-    var arrDetails = document.querySelectorAll('.details'); // перебираем все спойлееры для получения необходимых элементов и прослушивания событий
+    var arraccordion = document.querySelectorAll('.accordion'); // перебираем все спойлееры для получения необходимых элементов и прослушивания событий
 
     var _loop = function _loop(_i2) {
       // кнопка +/-
-      var toggleButton = arrDetails[_i2].querySelector('.details__toggle');
+      var toggleButton = arraccordion[_i2].querySelector('.accordion__toggle');
 
       if (toggleButton.getAttribute('aria-expanded') == 'false') {
-        detailsClose(arrDetails[_i2]);
+        accordionClose(arraccordion[_i2]);
       }
 
       toggleButton.addEventListener('click', function () {
         if (toggleButton.getAttribute('aria-expanded') == 'false') {
-          detailsOpen(arrDetails[_i2]);
+          accordionOpen(arraccordion[_i2]);
         } else {
-          detailsClose(arrDetails[_i2]);
+          accordionClose(arraccordion[_i2]);
         }
       });
     };
 
-    for (var _i2 = 0; _i2 < arrDetails.length; _i2++) {
+    for (var _i2 = 0; _i2 < arraccordion.length; _i2++) {
       _loop(_i2);
     }
   })();

@@ -133,51 +133,51 @@ if (document.querySelector('.form__social--js')) {
 	})
 }
 
-// details summary
+// accordion summary
 
-if (document.querySelector('.details')) {
+if (document.querySelector('.accordion')) {
 	// ролучаем все спойлеры
 
-	let arrDetails = document.querySelectorAll('.details');
+	let arraccordion = document.querySelectorAll('.accordion');
 
 
 	// перебираем все спойлееры для получения необходимых элементов и прослушивания событий
-	for (let i = 0; i < arrDetails.length; i++) {
+	for (let i = 0; i < arraccordion.length; i++) {
 		// кнопка +/-
-		const toggleButton = arrDetails[i].querySelector('.details__toggle');
+		const toggleButton = arraccordion[i].querySelector('.accordion__toggle');
 
 		if (toggleButton.getAttribute('aria-expanded') == 'false') {
-			detailsClose(arrDetails[i]);
+			accordionClose(arraccordion[i]);
 		}
 
 		toggleButton.addEventListener('click', function () {
 			if (toggleButton.getAttribute('aria-expanded') == 'false') {
-				detailsOpen(arrDetails[i]);
+				accordionOpen(arraccordion[i]);
 			} else {
-				detailsClose(arrDetails[i]);
+				accordionClose(arraccordion[i]);
 			}
 		});
 	}
 
-	function detailsClose(details) {
-		const toggleButton = details.querySelector('.details__toggle');
-		const content = details.querySelector('.details__content');
+	function accordionClose(accordion) {
+		const toggleButton = accordion.querySelector('.accordion__toggle');
+		const content = accordion.querySelector('.accordion__content');
 
 		const styles = getComputedStyle(document.documentElement);
 		const transitionDelay = styles.getPropertyValue('--transition-delay');
 
 		toggleButton.setAttribute('aria-label', 'Показать.');
 		toggleButton.setAttribute('aria-expanded', false);
-		content.classList.add('details__content--hidde');
+		content.classList.add('accordion__content--hidde');
 		setTimeout(() => {
-			details.classList.add('details--hidde');
+			accordion.classList.add('accordion--hidde');
 		}, transitionDelay);
 	}
 
-	function detailsOpen(details) {
-		const toggleButton = details.querySelector('.details__toggle');
-		const closeButton = details.querySelector('.details__close');
-		const content = details.querySelector('.details__content');
+	function accordionOpen(accordion) {
+		const toggleButton = accordion.querySelector('.accordion__toggle');
+		const closeButton = accordion.querySelector('.accordion__close');
+		const content = accordion.querySelector('.accordion__content');
 
 		const styles = getComputedStyle(document.documentElement);
 		const transitionDelay = styles.getPropertyValue('--transition-delay');
@@ -185,17 +185,17 @@ if (document.querySelector('.details')) {
 		toggleButton.setAttribute('aria-label', 'Скрыть.');
 		toggleButton.setAttribute('aria-expanded', true);
 
-		content.classList.remove('details__content--hidde');
+		content.classList.remove('accordion__content--hidde');
 		setTimeout(() => {
-			details.classList.remove('details--hidde');
+			accordion.classList.remove('accordion--hidde');
 		}, transitionDelay);
 
 		closeButton.addEventListener('click', () => {
-			detailsClose(details);
+			accordionClose(accordion);
 		});
 
-		if (details.querySelectorAll('img.video__media')) {
-			details.querySelectorAll('.video').forEach(elem => {
+		if (accordion.querySelectorAll('img.video__media')) {
+			accordion.querySelectorAll('.video').forEach(elem => {
 				loaderVideo(elem);
 			});
 		}
