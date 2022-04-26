@@ -181,7 +181,7 @@ del {
 
 .hidde-max-lg {
 	@media (max-width: @max-lg) {
-		display: none!important;
+		display: none !important;
 	}
 }
 
@@ -281,6 +281,18 @@ body > div.page-grid {
 	vertical-align: text-bottom;
 }
 
+h1 {
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 28px;
+	color: var(--color-light-text);
+	text-transform: uppercase;
+
+	@media (min-width: @min-lg) {
+		font-size: 44px;
+		line-height: 48px;
+	}
+}
 
 h2 {
 	width: 100%;
@@ -292,6 +304,11 @@ h2 {
 	color: var(--color-light-text);
 	text-transform: uppercase;
 	letter-spacing: 2px;
+
+	@media (min-width: @min-lg) {
+		font-size: 44px;
+		line-height: 48px;
+	}
 }
 
 .cource-wrap-level {
