@@ -168,6 +168,7 @@
 
 .about__education {
 	position: relative;
+	padding-bottom: 25px;
 	font-weight: 500;
 	color: var(--color-light-text);
 	background-color: var(--color-text);
@@ -201,5 +202,67 @@
 @media (min-width: @min-xxl) {
 	.about__education-heading {
 		font-size: 48px;
+	}
+}
+
+.about__quote {
+	padding-top: 39px;
+	padding-bottom: 39px;
+	overflow: hidden;
+	text-align: center;
+
+	& p {
+		position: relative;
+		margin: 0;
+		font-weight: 900;
+		font-size: 22px;
+		line-height: 28px;
+
+		@media (min-width: @min-md) {
+
+			&::before,
+			&::after {
+				width: 120px;
+			}
+		}
+
+		@media (min-width: @min-xxl) {
+
+			&::before,
+			&::after {
+				width: 155px;
+				height: 100px;
+			}
+		}
+
+		@media (min-width: @min-xl) {
+			font-size: 36px;
+			line-height: 44px;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			z-index: -1;
+			width: 90px;
+			height: 80px;
+			background-repeat: no-repeat;
+			background-size: auto 100%;
+			transform: translateY(-50%);
+		}
+
+		&::before {
+			left: 0;
+			background-image: url(../../img/icon/quotemark-up.svg);
+			background-position: center right;
+		}
+
+		&::after {
+			right: 0;
+			background-image: url(../../img/icon/quotemark-end.svg);
+			background-position: center left;
+		}
 	}
 }
