@@ -36,11 +36,11 @@
 	@media (min-width: @min-lg) {
 		height: 91px;
 		overflow: hidden;
-		transition: height var(--transition-delay) var(--transition-timing-function);
+		transition: height var(--transition-duration) var(--transition-timing-function);
 
 		& .btn {
 			max-width: 280px;
-			transition: opacity var(--transition-delay) var(--transition-timing-function), box-shadow var(--transition-delay) var(--transition-timing-function);
+			transition: opacity var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
 		}
 
 		& .btn:last-child {
@@ -100,7 +100,7 @@
 
 	@media (min-width: @min-lg) {
 		filter: grayscale(90%);
-		transition: filter var(--transition-delay) var(--transition-timing-function);
+		transition: filter var(--transition-duration) var(--transition-timing-function);
 	}
 }
 

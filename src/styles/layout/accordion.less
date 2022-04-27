@@ -25,7 +25,7 @@
 	color: var(--bg-body);
 	background-color: var(--bg-dark);
 	border-radius: 10px 10px 0 0;
-	transition: border-radius var(--transition-delay) var(--transition-timing-function);
+	transition: border-radius var(--transition-duration) var(--transition-timing-function);
 
 	@media (min-width: @min-lg) {
 		font-size: 15px;
@@ -47,7 +47,7 @@
 .accordion__content {
 	max-height: 2000px;
 	opacity: 1;
-	transition: max-height var(--transition-delay) var(--transition-timing-function), opacity var(--transition-delay) var(--transition-timing-function);
+	transition: max-height var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function);
 
 	& p {
 		margin: 0;
@@ -74,7 +74,7 @@
 	border: 0;
 	transform: translateY(-50%);
 	opacity: 0.4;
-	transition: opacity var(--transition-delay) var(--transition-timing-function);
+	transition: opacity var(--transition-duration) var(--transition-timing-function);
 	appearance: none;
 
 	&:hover {
@@ -94,7 +94,7 @@
 	}
 
 	&::after {
-		transition: width var(--transition-delay) var(--transition-timing-function), height var(--transition-delay) var(--transition-timing-function);
+		transition: width var(--transition-duration) var(--transition-timing-function), height var(--transition-duration) var(--transition-timing-function);
 	}
 }
 
@@ -111,7 +111,7 @@
 	font-size: 20px;
 	font-family: var(--font-heading);
 	opacity: 0.4;
-	transition: opacity var(--transition-delay) var(--transition-timing-function);
+	transition: opacity var(--transition-duration) var(--transition-timing-function);
 
 	@media (min-width: @min-lg) {
 		font-size: 24px;
@@ -148,7 +148,7 @@
 		border-top-width: 0;
 		border-left-width: 0;
 		transform: rotate(45deg);
-		transition: border var(--transition-delay) var(--transition-timing-function);
+		transition: border var(--transition-duration) var(--transition-timing-function);
 	}
 }
 
@@ -221,7 +221,7 @@
 	text-transform: uppercase;
 	background-color: transparent;
 	border: 0;
-	transition: opacity var(--transition-delay) var(--transition-timing-function);
+	transition: opacity var(--transition-duration) var(--transition-timing-function);
 
 	&:hover {
 		opacity: 0.7;

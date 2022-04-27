@@ -1,5 +1,5 @@
 .popup {
-	transition: opacity var(--transition-delay) var(--transition-timing-function) !important;
+	transition: opacity var(--transition-duration) var(--transition-timing-function) !important;
 
 	& .popup__container {
 		margin-right: var(--offset-page);
@@ -56,7 +56,7 @@
 		&::before,
 		&::after {
 			background-color: var(--color-light-text);
-			transition: background var(--transition-delay) var(--transition-timing-function);
+			transition: background var(--transition-duration) var(--transition-timing-function);
 		}
 
 		&:hover {
