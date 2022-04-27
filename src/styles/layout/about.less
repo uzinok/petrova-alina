@@ -363,7 +363,7 @@ p.about__work-bg-text {
 .about__certificates {
 	position: relative;
 	padding-top: 70px;
-	padding-bottom: 80px;
+	padding-bottom: 50px;
 	overflow: hidden;
 }
 
@@ -372,6 +372,7 @@ p.about__work-bg-text {
 }
 
 .about__certificates-list {
+	align-items: center;
 	transition-timing-function: var(--transition-timing-function);
 }
 
@@ -440,4 +441,23 @@ button.about__certificates-nav-button {
 
 button.about__certificates-nav-button--next {
 	transform: scale(-1, 1);
+}
+
+.about__why-heading {
+	color: var(--color-dark-text);
+}
+
+.about__why-img {
+	max-width: calc(100% + var(--offset-page) * 2);
+	margin-bottom: 30px;
+	margin-left: calc(var(--offset-page) * -1);
+
+	@media (min-width: @min-lg) {
+		margin-bottom: 50px;
+	}
+}
+
+.about__why-text {
+	max-width: 700px;
+	margin: 0 auto;
 }
