@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="./library/swiper-8.0.7/swiper-bundle.min.css">
+	<link rel="stylesheet" href="styles/form.css">
+	<link rel="stylesheet" href="styles/form-media.css">
+	<meta name="robots" content="noindex, nofollow" />
+</head>
+
+<body>
+
+	<div class="page-grid">
+		{% include 'template/header.html' %}
+
+		<main class="page-main col">
+			<div>
+				<h1>Твой профиль</h1>
+
+				<form action="#" class="form">
+
+					<fieldset class="form__fieldset col">
+						<legend class="visually-hidden">Личные данные</legend>
+
+						<label class="form__label" for="id">Логин</label>
+						<input class="form__control" id="id" type="text" value="name" required>
+
+						<div class="form__label">Пол</div>
+						<div class="form__radio-wrap">
+							<input id="female" class="visually-hidden form__radio" type="radio" name="gender" value="female" checked>
+							<label for="female" class="form__radio-label">Женский</label>
+
+							<input id="male" class="visually-hidden form__radio" type="radio" name="gender" value="male">
+							<label for="male" class="form__radio-label">Мужской</label>
+
+							<input id="other" class="visually-hidden form__radio" type="radio" name="gender" value="other">
+							<label for="other" class="form__radio-label">Иной</label>
+						</div>
+
+						<div class="form__grid">
+							<label for="height" class="form__label">Рост (см)</label>
+							<div class="form__number-wrap--js">
+								<button type="button" class="form__control form__button-minus" aria-label="Меньше." style="display: none;"></button>
+								<input type="number" id="height" class="form__control form__number" min="100" max="250" step="5" placeholder="185" value="185" required>
+								<button type="button" class="form__control form__button-plus" aria-label="Больше." style="display: none;"></button>
+							</div>
+
+							<label for="weight" class="form__label">Вес (кг)</label>
+							<div class="form__number-wrap--js">
+								<button type="button" class="form__control form__button-minus" aria-label="Меньше." style="display: none;"></button>
+								<input type="number" id="weight" class="form__control form__number" min="25" max="250" step="0.5" placeholder="50" value="50" required>
+								<button type="button" class="form__control form__button-plus" aria-label="Больше." style="display: none;"></button>
+							</div>
+						</div>
+
+						<label class="form__label" for="birth-day">Дата рождения</label>
+						<div class="form__number-wrap form__birth-date">
+							<input type="number" id="birth-day" class="form__control form__number" min="1" max="31" placeholder="дд" required>
+							<input type="number" id="birth-month" class="form__control form__number" min="1" max="12" placeholder="мм" required>
+							<input type="number" id="birth-year" class="form__control form__number" min="1900" placeholder="гггг" required>
+						</div>
+					</fieldset>
+
+					<fieldset class="form__fieldset col">
+						<legend class="form__legend">Личные данные</legend>
+
+						<label class="form__label" for="email">Почта</label>
+						<input class="form__control" id="email" type="email" placeholder="some@mail.ru" required>
+
+						<label class="form__label" for="select">Страна</label>
+						<div class="form__select-icon--js">
+							<select name="country" id="select" class="form__control">
+								<option value="RU">Российская Федерация</option>
+								<option value="AM">Армения</option>
+								<option value="AZ">Республика Азербайджан</option>
+								<option value="BY">Республика Беларусь</option>
+								<option value="BA">Босния и Герцеговина</option>
+								<option value="EE">Эстонская Республика</option>
+								<option value="GE">Грузия</option>
+								<option value="KZ">Республика Казахстан</option>
+								<option value="KG">Киргизская Республика</option>
+								<option value="LV">Латвийская Республика</option>
+								<option value="LT">Литовская Республика</option>
+								<option value="MD">Республика Молдова</option>
+								<option value="TJ">Республика Таджикистан</option>
+								<option value="TM">Туркменистан</option>
+								<option value="UA">Украина</option>
+								<option value="UZ">Республика Узбекистан</option>
+							</select>
+						</div>
+
+						<label class="form__label" for="phone">Почта</label>
+						<input class="form__control" id="phone" type="tel" placeholder="+7 123 456 78 90" required>
+
+						<label class="form__label" for="social">Социальные сети</label>
+						<div class="form__social form__social--js">
+							<div class="form__select-icon--js">
+								<select name="social" id="social" class="form__control">
+									<option value="instagram">Instagram</option>
+									<option value="telegram">Telegram</option>
+									<option value="vk">Vk</option>
+									<option value="facebook">Facebook</option>
+								</select>
+							</div>
+							<div class="form__social-input-wrap">
+								<input class="form__control" type="text" placeholder="instagram" name="instagram">
+								<input class="form__control" type="text" placeholder="telegram" name="telegram">
+								<input class="form__control" type="text" placeholder="vk" name="vk">
+								<input class="form__control" type="text" placeholder="facebook" name="facebook">
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="form__fieldset col">
+						<legend class="form__legend">Смена пароля</legend>
+
+						<label class="form__label" for="old-password">Текущий пароль</label>
+						<div class="form__password form__password--js">
+							<button type="button" class="form__password-toggle" style="display: none;" tabindex="-1"></button>
+							<input class="form__control" id="old-password" type="password" value="m88{hKBB{Wf8f}th~TFe0Q2b$Jmx3y" required>
+						</div>
+
+						<label class="form__label" for="new-password">Новый пароль</label>
+						<div class="form__password form__password--js">
+							<button type="button" class="form__password-toggle" style="display: none;" tabindex="-1"></button>
+							<input class="form__control" id="new-password" type="password" value="m88{hKBB{Wf8f}th~TFe0Q2b$Jmx3y" required>
+						</div>
+					</fieldset>
+
+					<fieldset class="form__fieldset col">
+						<legend class="form__legend">Уведомления</legend>
+						<div class="form__checkbox-wrap">
+
+							<label for="subscription" class="form__checkbox-label">
+								<input type="checkbox" id="subscription" name="subscription" class="visually-hidden form__checkbox" checked>
+								<span class="form__checkbox-view"></span>
+								Хочу получать рассылки по почте
+							</label>
+
+							<p class="form__notes">Обновление питания, тренировок, ответы в чатах, промокоды, акции и скидки. Только важное и полезное</p>
+						</div>
+					</fieldset>
+
+					<div class="col form__button-wrap">
+						<button type="submit" class="btn btn--success">Сохранить всё</button>
+						<button type="reset" class="btn btn--text-small">Вернуть как было</button>
+					</div>
+				</form>
+			</div>
+		</main>
+
+	</div>
+
+	{% include 'template/footer.html' %}
+
+
+	<script src="scripts/main.min.js"></script>
+
+	<div style="display: none;">
+		{% include 'img/sprite.svg' %}
+	</div>
+
+	<a href="blank.html" style="position: fixed;bottom: 0;right: 0;">blank.html</a>
+</body>
+
+</html>

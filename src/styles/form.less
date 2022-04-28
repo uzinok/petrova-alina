@@ -1,5 +1,11 @@
 @import './layout/variable.less';
 
+.form {
+	max-width: 520px;
+	margin-right: calc(var(--offset-page) * -1);
+	margin-left: calc(var(--offset-page) * -1);
+}
+
 .form ::placeholder {
 	color: var(--color-light-text);
 }
@@ -15,12 +21,33 @@
 }
 
 .form__fieldset {
+	position: relative;
 	margin: 0;
-	padding: 0;
+	padding-top: 0;
+	padding-bottom: 28px;
 	border: 0;
+
+	&:first-child {
+		padding-top: 28px;
+		border-top: 1px solid var(--bg-light);
+
+		&::before {
+			display: none;
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -73px;
+		left: 0;
+		width: 100%;
+		border-top: 1px solid var(--bg-light);
+	}
 }
 
 .form__legend {
+	padding-top: 28px;
 	font-weight: 700;
 	font-size: 22px;
 	line-height: 45px;
@@ -346,6 +373,7 @@ select.form__control {
 
 .form__social-input-wrap {
 	position: relative;
+	width: 100%;
 }
 
 .form__social-input-wrap input {
@@ -361,4 +389,38 @@ select.form__control {
 
 .form__social-input--active {
 	z-index: 1;
+}
+
+.form__birth-date {
+	display: grid;
+	grid-template-columns: 1fr 1fr 2fr;
+	max-width: 250px;
+	gap: 4px;
+
+	& input {
+		padding: 16px 16px;
+
+		&:first-child {
+			border-radius: 6px 0 0 6px;
+		}
+
+		&:last-child {
+			border-radius: 0 6px 6px 0;
+		}
+	}
+}
+
+.form__button-wrap {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	padding-top: 30px;
+	padding-bottom: 80px;
+	border-top: 1px solid var(--bg-light);
+	justify-items: center;
+	gap: 20px;
+
+	& button {
+		width: fit-content;
+		padding: 13px 40px;
+	}
 }
