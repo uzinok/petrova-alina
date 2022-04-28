@@ -443,6 +443,10 @@ button.about__certificates-nav-button--next {
 	transform: scale(-1, 1);
 }
 
+.about__why {
+	overflow: hidden;
+}
+
 .about__why-heading {
 	color: var(--color-dark-text);
 }
@@ -460,4 +464,57 @@ button.about__certificates-nav-button--next {
 .about__why-text {
 	max-width: 700px;
 	margin: 0 auto;
+}
+
+.about__grid-images {
+	display: grid;
+	grid-template-columns: 200px 201px;
+	grid-template-rows: 142px 166px;
+	max-width: 700px;
+	margin: 0 auto;
+	gap: 10px;
+
+	@media (min-width: @min-lg) {
+		grid-template-columns: 340px 340px;
+		grid-template-rows: 240px 280px;
+		padding: 0;
+		gap: 20px;
+	}
+
+	& img {
+		display: block;
+	}
+
+	& picture {
+		&:first-child {
+			grid-row-end: -1;
+			grid-row-start: 1;
+
+			@media (min-width: @min-lg) {
+				grid-column-start: 2;
+			}
+		}
+	}
+}
+
+.about__footer {
+	padding-top: 36px;
+	padding-bottom: 54px;
+	text-align: center;
+
+	@media (min-width: @min-md) {
+		padding-top: 78px;
+		padding-bottom: 94px;
+	}
+}
+
+.about__footer-autograph {
+	display: block;
+	margin-top: 38px;
+	margin-right: auto;
+	margin-left: auto;
+
+		@media (min-width: @min-md) {
+	margin-top: 54px;
+	}
 }
