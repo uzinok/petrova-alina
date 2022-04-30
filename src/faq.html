@@ -21,6 +21,45 @@
 			<div>
 				<h1>Ответы на вопросы</h1>
 
+				<!-- tab__wrap-label -->
+				<div class="tab__wrap-label">
+					<label for="tabs-1" class="tab__label tab__label--a">
+						Общие темы
+					</label>
+					<label for="tabs-2" class="tab__label tab__label--b">
+						О тренировках
+					</label>
+					<label for="tabs-3" class="tab__label tab__label--c">
+						О питании
+					</label>
+				</div>
+				<!-- ./tab__wrap-label -->
+
+				<div class="tab__wrap-content">
+
+					<input type="radio" id="tabs-1" name="tabs-1" class="tab__radio" checked>
+					<div class="tab__wrap-block">
+						{% include 'template/faq-a.html' %}
+					</div>
+
+					<input type="radio" id="tabs-2" name="tabs-1" class="tab__radio">
+					<div class="tab__wrap-block">
+						<details>
+							<summary>второй</summary>
+							<p>Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Он великий своего назад не пор lorem текстов прямо агентство, его наш, злых текстами всемогущая большого даже но текста до.</p>
+						</details>
+					</div>
+
+					<input type="radio" id="tabs-3" name="tabs-1" class="tab__radio">
+					<div class="tab__wrap-block">
+						<details>
+							<summary>третий</summary>
+							<p>Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Он великий своего назад не пор lorem текстов прямо агентство, его наш, злых текстами всемогущая большого даже но текста до.</p>
+						</details>
+					</div>
+
+				</div>
+
 			</div>
 		</main>
 
