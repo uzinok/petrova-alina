@@ -19,9 +19,53 @@
 
 		<main class="page-main col">
 			<div>
+				<h2>Выбери курс</h2>
+
+				<!-- tab__wrap-label -->
 				<div class="tab__wrap-label">
-					{% include 'template/tab-label.html' %}
+					<label class="tab__label" for="tabs-1">
+						{% include 'img/cource-icon/course-tab-buttocks.svg' %}
+						Красивые ягодицы
+					</label>
+					<label class="tab__label tab__label--active" for="tabs-2">
+						{% include 'img/cource-icon/course-tab-weight.svg' %}
+						Похудение
+					</label>
+					<label class="tab__label" for="tabs-3">
+						{% include 'img/cource-icon/course-tab-body.svg' %}
+						Рельефное тело
+					</label>
+					<label class="tab__label" for="tabs-4">
+						{% include 'img/cource-icon/course-tab-back.svg' %}
+						Здоровая спина
+					</label>
 				</div>
+				<!-- ./tab__wrap-label -->
+
+				<!-- tab__wrap-content -->
+				<div class="tab__wrap-content">
+
+					<input type="radio" id="tabs-1" name="tabs-1" class="tab__radio" checked>
+					<div class="tab__wrap-block">
+						{% include 'template/cource-buttocks.html' %}
+					</div>
+
+					<input type="radio" id="tabs-2" name="tabs-1" class="tab__radio" checked>
+					<div class="tab__wrap-block">
+						{% include 'template/cource-weight.html' %}
+					</div>
+
+					<input type="radio" id="tabs-3" name="tabs-1" class="tab__radio" checked>
+					<div class="tab__wrap-block">
+						{% include 'template/cource-body.html' %}
+					</div>
+
+					<input type="radio" id="tabs-4" name="tabs-1" class="tab__radio" checked>
+					<div class="tab__wrap-block">
+						{% include 'template/cource-back.html' %}
+					</div>
+				</div>
+				<!-- ./tab__wrap-content -->
 			</div>
 		</main>
 
