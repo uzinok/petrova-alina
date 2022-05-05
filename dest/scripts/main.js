@@ -196,4 +196,23 @@ function loaderVideo(video) {
     iframe.classList.add('video__media');
     video.append(iframe);
   }
+} // tab__label--js
+
+
+if (document.querySelector('.tab__label--js')) {
+  var tabLabel = document.querySelectorAll('.tab__label--js');
+  var tabRadio = document.querySelectorAll('.tab__radio--js');
+  console.log(tabLabel);
+  console.log(tabRadio);
+  tabRadio.forEach(function (radio) {
+    if (radio.checked) {
+      document.querySelector("[for=\"".concat(radio.id, "\"]")).classList.add('tab__label--active');
+    }
+  });
+  tabLabel.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tab.parentNode.querySelector('.tab__label--active').classList.remove('tab__label--active');
+      tab.classList.add('tab__label--active');
+    });
+  });
 }

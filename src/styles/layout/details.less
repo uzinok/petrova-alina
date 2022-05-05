@@ -4,6 +4,7 @@
 	padding-bottom: 30px;
 	padding-left: var(--offset-page);
 	border-top: 1px solid var(--bg-light);
+	box-sizing: content-box;
 
 	&:last-child {
 		border-bottom: 1px solid var(--bg-light);
@@ -23,6 +24,10 @@
 	line-height: 24px;
 	cursor: pointer;
 
+	@media (min-width: @min-lg) {
+		font-size: 18px;
+		line-height: 26px;
+	}
 
 	&::after {
 		content: '';
@@ -41,8 +46,7 @@
 	}
 }
 
-.details--open .details__summary::after,
-.details[open] .details__summary::after {
+.details--open .details__summary::after {
 	transform: translateY(-50%) rotate(-45deg);
 }
 
@@ -53,6 +57,7 @@
 	& ul,
 	& ol {
 		margin: 0;
+		font-size: 13px;
 
 		&:not(:last-child) {
 			margin-bottom: 1em;
@@ -61,5 +66,9 @@
 		&:first-child {
 			padding-top: 1em;
 		}
+	}
+
+	& li:not(:last-child) {
+		margin-bottom: 0.5em;
 	}
 }

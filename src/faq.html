@@ -19,18 +19,18 @@
 		{% include 'template/header.html' %}
 
 		<main class="page-main col">
-			<div>
+			<div class="faq">
 				<h1>Ответы на вопросы</h1>
 
 				<!-- tab__wrap-label -->
-				<div class="tab__wrap-label">
-					<label for="tabs-1" class="tab__label tab__label--a">
+				<div class="tab__wrap-label faq__wrap-label">
+					<label for="tabs-1" data-before="a" class="faq__label tab__label tab__label--js" tabindex="0">
 						Общие темы
 					</label>
-					<label for="tabs-2" class="tab__label tab__label--b">
+					<label for="tabs-2" data-before="b" class="faq__label tab__label tab__label--js" tabindex="0">
 						О тренировках
 					</label>
-					<label for="tabs-3" class="tab__label tab__label--c">
+					<label for="tabs-3" data-before="c" class="faq__label tab__label tab__label--js" tabindex="0">
 						О питании
 					</label>
 				</div>
@@ -39,12 +39,12 @@
 				<!-- tab__wrap-content -->
 				<div class="tab__wrap-content">
 
-					<input type="radio" id="tabs-1" name="tabs-1" class="tab__radio" checked>
+					<input type="radio" id="tabs-1" name="tabs-1" class="tab__radio tab__radio--js" checked>
 					<div class="tab__wrap-block">
 						{% include 'template/faq-a.html' %}
 					</div>
 
-					<input type="radio" id="tabs-2" name="tabs-1" class="tab__radio">
+					<input type="radio" id="tabs-2" name="tabs-1" class="tab__radio tab__radio--js">
 					<div class="tab__wrap-block">
 						<details>
 							<summary>второй</summary>
@@ -54,7 +54,7 @@
 						</details>
 					</div>
 
-					<input type="radio" id="tabs-3" name="tabs-1" class="tab__radio">
+					<input type="radio" id="tabs-3" name="tabs-1" class="tab__radio tab__radio--js">
 					<div class="tab__wrap-block">
 						<details>
 							<summary>третий</summary>

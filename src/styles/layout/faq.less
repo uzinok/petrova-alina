@@ -1,0 +1,29 @@
+.faq__wrap-label {
+
+	@media (min-width: @min-xxl) {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 340px));
+	}
+}
+
+.faq__label {
+	z-index: 1;
+	max-width: 340px;
+	border: 1px solid var(--bg-light);
+
+	&:hover {
+		box-shadow: none;
+	}
+
+	&::after {
+		content: attr(data-before);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: -1;
+		font-size: 100px;
+		color: var(--color-light-text);
+		text-transform: uppercase;
+		transform: translate(-50%, -50%);
+		opacity: 0.5;
+	}
+}
