@@ -24,27 +24,26 @@
 				<h2>Твои тренировки</h2>
 
 				<details class="training__details details">
-					<summary class="details__summary">Фильтры</summary>
+					<summary class="details__summary col">Фильтры</summary>
 					<div class="details__content">
 
-						<form action="#" class="training__form form">
-							<fieldset class="form__fieldset">
+						<form action="#" class="training__form form col">
+							<fieldset class="training__form-grid form__fieldset col">
 								<legend class="visually-hidden">Доступность</legend>
 								<div class="form__checkbox-wrap">
 									<label for="accessibility" class="form__checkbox-label">
 										<input type="checkbox" id="accessibility" name="accessibility" class="visually-hidden form__checkbox" checked="checked"> <span class="form__checkbox-view"></span>
-										Показывать доступные тренировки <span>3</span></label>
+										<span class="form__checkbox-text">Показывать доступные тренировки </span><span>3</span></label>
 								</div>
-
 								<div class="form__checkbox-wrap">
 									<label for="overdue" class="form__checkbox-label">
 										<input type="checkbox" id="overdue" name="overdue" class="visually-hidden form__checkbox" checked="checked"> <span class="form__checkbox-view"></span>
-										Показывать просроченные тренировки <span>3</span></label>
+										<span class="form__checkbox-text">Показывать просроченные тренировки </span><span>3</span></label>
 								</div>
 								<div class="form__checkbox-wrap">
 									<label for="completed" class="form__checkbox-label">
-										<input type="checkbox" id="completed" name="completed" class="visually-hidden form__checkbox" checked="checked"> <span class="form__checkbox-view"></span>
-										Показывать завершённые тренировки <span>3</span></label>
+										<input type="checkbox" id="completed" name="completed" class="visually-hidden form__checkbox" checked="checked" disabled> <span class="form__checkbox-view"></span>
+										<span class="form__checkbox-text">Показывать завершённые тренировки </span><span>3</span></label>
 								</div>
 								<div class="form__checkbox-wrap">
 									<label for="unpatched" class="form__checkbox-label">
@@ -52,6 +51,29 @@
 										Показывать неначатые тренировки <span>3</span></label>
 								</div>
 							</fieldset>
+							<fieldset class="training__form-grid form__fieldset col">
+								<legend class="visually-hidden">Тренировки</legend>
+								<div class="form__checkbox-wrap">
+									<label for="buttocks" class="form__checkbox-label">
+										<input type="checkbox" id="buttocks" name="buttocks" class="visually-hidden form__checkbox" checked="checked"> <span class="form__checkbox-view"></span>
+										<span class="form__checkbox-text">Красивые ягодицы </span><span>3</span></label>
+								</div>
+								<div class="form__checkbox-wrap">
+									<label for="body" class="form__checkbox-label">
+										<input type="checkbox" id="body" name="body" class="visually-hidden form__checkbox" checked="checked"> <span class="form__checkbox-view"></span>
+										<span class="form__checkbox-text">Рельефный тело </span><span>3</span></label>
+								</div>
+								<div class="form__checkbox-wrap">
+									<label for="back" class="form__checkbox-label">
+										<input type="checkbox" id="back" name="back" class="visually-hidden form__checkbox" checked="checked"> <span class="form__checkbox-view"></span>
+										<span class="form__checkbox-text">Здоровая спина </span><span>3</span></label>
+								</div>
+							</fieldset>
+
+							<div class="training__form-wrap-button">
+								<button type="button" class="btn btn--success">Выбрать всё</button>
+								<button type="button" class="btn btn--text-small">Снять все выделения</button>
+							</div>
 						</form>
 
 					</div>

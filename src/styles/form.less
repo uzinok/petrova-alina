@@ -277,7 +277,11 @@ select.form__control {
 
 .form__checkbox:disabled + .form__checkbox-view {
 	box-shadow: none;
-	opacity: 0.6;
+	background-color: var(--bg-light);
+}
+
+.form__checkbox:disabled ~ .form__checkbox-text {
+	color: var(--color-light-text);
 }
 
 .form__notes {
