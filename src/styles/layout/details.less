@@ -40,24 +40,55 @@
 	transform: translateY(-50%) rotate(-45deg);
 }
 
-.details__content {
+.details--icon {
+	margin-right: calc(var(--offset-page)*-1);
+	margin-bottom: var(--offset-page);
+	margin-left: calc(var(--offset-page)*-1);
+	border-bottom: 1px solid var(--color-light-text);
 
-	& p,
-	& ul,
-	& ol {
-		margin: 0;
-		font-size: 13px;
-
-		&:not(:last-child) {
-			margin-bottom: 1em;
-		}
-
-		&:first-child {
-			padding-top: 1em;
-		}
+	@media (min-width: @min-md) {
+		border: 1px solid var(--color-light-text);
+		border-radius: 9px;
 	}
 
-	& li:not(:last-child) {
-		margin-bottom: 0.5em;
+	& .details__content {
+		padding-bottom: var(--offset-page);
+	}
+
+	& .details__summary {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-size: 12px;
+		line-height: 20px;
+		color: var(--bg-body);
+		background-color: var(--bg-dark);
+
+		&::after {
+			right: 20px;
+		}
+	}
+}
+
+
+.summary__icon {
+	z-index: 1;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: -1;
+		width: 70px;
+		height: 100%;
+		transform: translateY(-50%);
+		filter: invert(50%);
+	}
+
+	&--buttocks::before {
+		background-image: url(../../img/cource-icon/course-tab-buttocks.svg);
+		background-repeat: no-repeat;
+		background-position: 5px center;
+		background-size: contain;
 	}
 }

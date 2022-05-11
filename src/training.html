@@ -20,15 +20,16 @@
 		{% include 'template/header.html' %}
 
 		<main class="page-main col">
-			<div class="training">
+
+			<section class="training">
 				<h2>Твои тренировки</h2>
 
-				<details class="training__details details">
+				<details class="training-filter__details details">
 					<summary class="details__summary col">Фильтры</summary>
 					<div class="details__content">
 
-						<form action="#" class="training__form form col">
-							<fieldset class="training__form-grid form__fieldset col">
+						<form action="#" class="training-filter__form form col">
+							<fieldset class="training-filter__form-grid form__fieldset col">
 								<legend class="visually-hidden">Доступность</legend>
 								<div class="form__checkbox-wrap">
 									<label for="accessibility" class="form__checkbox-label">
@@ -51,7 +52,7 @@
 										Показывать неначатые тренировки <span>3</span></label>
 								</div>
 							</fieldset>
-							<fieldset class="training__form-grid form__fieldset col">
+							<fieldset class="training-filter__form-grid form__fieldset col">
 								<legend class="visually-hidden">Тренировки</legend>
 								<div class="form__checkbox-wrap">
 									<label for="buttocks" class="form__checkbox-label">
@@ -70,7 +71,7 @@
 								</div>
 							</fieldset>
 
-							<div class="training__form-wrap-button">
+							<div class="training-filter__form-wrap-button">
 								<button type="button" class="btn btn--success">Выбрать всё</button>
 								<button type="button" class="btn btn--text-small">Снять все выделения</button>
 							</div>
@@ -78,7 +79,69 @@
 
 					</div>
 				</details>
-			</div>
+
+				<div class="training__wrap-details">
+					<details class="details details--icon">
+						<summary class="details__summary summary summary__icon summary__icon--buttocks col">Красивые ягодицы</summary>
+
+						<div class="details__content col">
+							<ul class="training__card-list">
+								<li class="training__card-item">
+									<h3 class="training__card-header">
+										<span>Любитель</span>
+										<span class="training__card-info">Не начата</span>
+									</h3>
+									<div class="training__card-icon training__card-icon--buttocks-1"></div>
+									<button type="button" class="btn btn--text-small">Приступить</button>
+								</li>
+								<li class="training__card-item">
+									<h3 class="training__card-header">
+										<span>Профессионал 1</span>
+										<span class="training__card-info">5 из 12</span>
+									</h3>
+									<div class="training__card-icon training__card-icon--buttocks-professional-1">
+										<p class="training__card-error">Эта тренировка просрочена</p>
+									</div>
+									<button type="button" class="btn btn--success">Продлить</button>
+								</li>
+								<li class="training__card-item">
+									<h3 class="training__card-header">
+										<span>Профессионал 2</span>
+										<span class="training__card-info training__card-info--passed">Пройдена</span>
+									</h3>
+									<div class="training__card-icon training__card-icon--buttocks-professional-2"></div>
+									<button type="button" class="btn btn--text-small">Приступить</button>
+								</li>
+								<li class="training__card-item">
+									<h3 class="training__card-header">
+										<span>Профессионал 3</span>
+										<span class="training__card-info">Не начата</span>
+									</h3>
+									<div class="training__card-icon training__card-icon--buttocks-professional-3"></div>
+									<button type="button" class="btn btn--text-small">Приступить</button>
+								</li>
+							</ul>
+						</div>
+					</details>
+
+					<details class="details details--icon">
+						<summary class="details__summary summary summary__icon summary__icon--back col">Здоровая спина</summary>
+
+						<div class="details__content col">
+							<ul class="training__card-list">
+								<li class="training__card-item">
+									<h3 class="training__card-header">
+										<span>Любитель</span>
+										<span class="training__card-info">Не начата</span>
+									</h3>
+									<div class="training__card-icon training__card-icon--back-1"></div>
+									<button type="button" class="btn btn--text-small">Приступить</button>
+								</li>
+							</ul>
+						</div>
+					</details>
+				</div>
+			</section>
 		</main>
 
 	</div>

@@ -43,4 +43,22 @@
 	& .details__summary {
 		padding-right: var(--offset-page);
 	}
+	& p,
+	& ul,
+	& ol {
+		margin: 0;
+		font-size: 13px;
+
+		&:not(:last-child) {
+			margin-bottom: 1em;
+		}
+
+		&:first-child {
+			padding-top: 1em;
+		}
+	}
+
+	& li:not(:last-child) {
+		margin-bottom: 0.5em;
+	}
 }

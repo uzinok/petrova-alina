@@ -1,10 +1,12 @@
-.training__details {
+.training-filter__details {
 	margin-right: calc(var(--offset-page)*-1);
 	margin-left: calc(var(--offset-page)*-1);
 }
 
-.training__details {
+.training-filter__details {
+	margin-bottom: var(--offset-page);
 	border-bottom: 1px solid transparent;
+
 	& summary {
 		padding-top: 16px;
 		padding-bottom: 16px;
@@ -36,6 +38,7 @@
 
 	&.details--open {
 		border-bottom: 1px solid var(--color-light-text);
+
 		& summary {
 			&::after {
 				transform: translateY(-4px) rotate(45deg);
@@ -44,11 +47,11 @@
 	}
 }
 
-.training__form.form {
+.training-filter__form.form {
 	max-width: calc(100% + var(--offset-page) * 2);
 }
 
-.form__fieldset.training__form-grid {
+.form__fieldset.training-filter__form-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 520px));
 	padding-top: 28px;
@@ -67,14 +70,95 @@
 	}
 }
 
-.training__form-grid .form__checkbox-label span:last-child {
+.training-filter__form-grid .form__checkbox-label span:last-child {
 	display: inline-block;
 	padding-left: 5px;
 	color: var(--color-light-text);
 }
 
-.training__form-wrap-button {
+.training-filter__form-wrap-button {
 	display: flex;
-	gap: 20px;
 	padding: var(--offset-page);
+	border-top: 1px solid var(--bg-light);
+	gap: 20px;
+}
+
+.training__card-list {
+	list-style-type: none;
+}
+
+.training__card-list {
+	display: flex;
+	flex-wrap: wrap;
+	width: fit-content;
+	margin: 0 auto;
+	padding: 0;
+	gap: 40px;
+}
+
+.training__card-item {
+	width: 100%;
+	max-width: 260px;
+	text-align: center;
+
+	@media (min-width: @min-xl) {
+		max-width: 299px;
+	}
+}
+
+.training__card-header {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding-top: 30px;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.training__card-info {
+	color: var(--color-light-text);
+
+	&--passed {
+		&::before {
+			content: url(../../img/icon/check.svg);
+			margin-right: 5px;
+		}
+	}
+}
+
+.training__card-icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 190px;
+	margin-bottom: 25px;
+	overflow: hidden;
+	background-color: var(--color-light-text);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border-radius: 5px;
+
+	&--buttocks-1 {
+		background-image: url(../../img/card-program/buttocks/hobbyist.png);
+	}
+}
+
+.training__card-error {
+	margin: 0;
+	padding: 5px 10px;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 20px;
+	text-align: left;
+	color: var(--bg-body);
+	background-color: rgba(#eb274b, 80%);
+}
+
+@media (min-width: @min-md) {
+	.training__wrap-details {
+		padding-right: var(--offset-page);
+		padding-left: var(--offset-page);
+	}
 }
