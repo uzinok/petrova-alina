@@ -1,0 +1,13 @@
+.article__top {
+	position: relative;
+	margin-right: calc(var(--offset-page)*-1);
+	margin-left: calc(var(--offset-page)*-1);
+
+	& img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		object-fit: cover;
+	}
+}

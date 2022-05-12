@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/form.css">
+	<meta name="robots" content="noindex, nofollow" />
+</head>
+
+<body>
+
+	<div class="page-grid">
+		{% include 'template/header.html' %}
+
+		<main class="page-main col">
+
+			<section class="article">
+				<h1>Статьи</h1>
+
+				<div class="article__top">
+					<h2 class="article__top-title">Неудаление Кейна и красная Робертсону</h2>
+					<p class="article__top-subtitle">Тоттенхэм» и «Ливерпуль» искрили не только голами</p>
+					<picture>
+						<source media="(min-width: 768px)" srcset="img/articles/articles-heading.jpg">
+						<img src="img/articles/articles-heading.jpg" alt="" class="">
+					</picture>
+					<img src="./img/articles/articles-heading.jpg" alt="">
+				</div>
+
+				<div class="col">
+					<div class="article__item">
+						<h2 class="article__item-title">Tackling imposter syndrome as a health and fitness professional</h2>
+						<p class="article__item-subtitle">All about the fear of being exposed as a fraud as expectations and responsibilities increase</p>
+					</div>
+					<div class="article__item">
+						<h2 class="article__item-title">«Шпоры» и «Красные» устроили шоу (2:2)</h2>
+						<p class="article__item-subtitle">За такие матчи мы и любим АПЛ</p>
+					</div>
+				</div>
+
+				<!-- subscribe -->
+				<div class="subscribe">
+					<h2 class="subscribe__title">Будь в курсе!</h2>
+					<p class="subscribe__subtitle">Подписывайся, чтобы получать прямо в ящик новые блоги, советы и спецпредложения от Алины (не чаще раза в месяц)</p>
+
+					<form action="#" class="form">
+						<label class="visually-hidden" for="subscribe">Электронная почта</label>
+						<input class="form__control" id="subscribe" type="email" placeholder="Электронная почта" required="">
+						<button type="submit" class="btn btn--success">Подписаться</button>
+					</form>
+				</div>
+				<!-- ./subscribe -->
+
+				<div class="col">
+					<div class="article__item">
+						<h2 class="article__item-title">Health impact of loneliness and social isolation</h2>
+						<p class="article__item-subtitle">And how health and wellness coaches can help</p>
+					</div>
+					<div class="article__item">
+						<h2 class="article__item-title">Virtual fitness is here to stay</h2>
+						<p class="article__item-subtitle">How to adapt as a personal trainer.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+	</div>
+
+	{% include 'template/footer.html' %}
+
+	<script src="scripts/main.min.js"></script>
+
+	<div style="display: none;">
+		{% include 'img/sprite.svg' %}
+	</div>
+
+	<a href="blank.html" style="position: fixed;bottom: 0;right: 0;">blank.html</a>
+</body>
+
+</html>
