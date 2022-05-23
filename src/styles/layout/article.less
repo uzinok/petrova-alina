@@ -1,13 +1,26 @@
 .article__top {
 	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: calc(var(--offset-page) * 2 + 100%);
+	min-height: 300px;
 	margin-right: calc(var(--offset-page)*-1);
 	margin-left: calc(var(--offset-page)*-1);
+	overflow: hidden;
 
-	& img {
+	& picture {
 		position: absolute;
 		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
+		left: 0;
+		z-index: -1;
+		min-height: 300px;
+	}
+
+	& img {
+		display: block;
+		max-width: fit-content;
 		object-fit: cover;
 	}
 }
