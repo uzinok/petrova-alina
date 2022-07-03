@@ -1,10 +1,10 @@
 .tab__wrap-label {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
 	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+	margin-bottom: 30px;
 	justify-items: center;
 	gap: 20px;
-	margin-bottom: 30px;
 
 	@media (min-width: @min-xxl) {
 		grid-template-columns: repeat(auto-fill, 250px);
@@ -16,8 +16,8 @@
 	}
 
 	& h2 {
-		grid-column-start: 1;
 		grid-column-end: -1;
+		grid-column-start: 1;
 	}
 }
 
@@ -46,6 +46,15 @@
 	@media (min-width: @min-md) {
 		min-height: 100px;
 		padding: 15px 40px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 	& svg {
