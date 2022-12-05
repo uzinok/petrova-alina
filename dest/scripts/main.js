@@ -6,30 +6,31 @@ if (document.querySelector('.ryear')) {
   var spanRyear = document.querySelectorAll('.ryear');
   var date = new Date();
   var year = date.getFullYear();
-
   for (var i = 0; i < spanRyear.length; i++) {
     spanRyear[i].textContent = year;
   }
-} // no-js
+}
 
-
+// no-js
 if (document.querySelector('.no-js')) {
   var listNoJs = document.querySelectorAll('.no-js');
   listNoJs.forEach(function (elem) {
     elem.classList.remove('no-js');
   });
-} //
+}
+
+//
+
 // nav
-
-
 var navButtonToggle = document.querySelector('.page-header__nav-toggle');
 var header = document.querySelector('.page-header');
 navButtonToggle.addEventListener('click', function () {
   header.classList.toggle('page-header__open');
   header.classList.toggle('page-header--close');
-}); // form
-// select
+});
 
+// form
+// select
 if (document.querySelectorAll('.form__select-icon--js')) {
   var setIconSelect = function setIconSelect(elem) {
     elem.classList.add('form__select-icon');
@@ -38,18 +39,16 @@ if (document.querySelectorAll('.form__select-icon--js')) {
       addDataIcon(elem);
     });
   };
-
   var addDataIcon = function addDataIcon(elem) {
     return elem.dataset.icon = elem.querySelector('select').value.toLowerCase();
   };
-
   var selectIcon = document.querySelectorAll('.form__select-icon--js');
   selectIcon.forEach(function (elem) {
     setIconSelect(elem);
   });
-} // input password
+}
 
-
+// input password
 if (document.querySelectorAll('.form__password--js')) {
   var arrInputPassword = document.querySelectorAll('.form__password--js');
   arrInputPassword.forEach(function (elem) {
@@ -62,9 +61,9 @@ if (document.querySelectorAll('.form__password--js')) {
       return input.setAttribute('type', 'password');
     });
   });
-} // input number
+}
 
-
+// input number
 if (document.querySelector('.form__number-wrap--js')) {
   var numberWrap = document.querySelectorAll('.form__number-wrap--js');
   numberWrap.forEach(function (elem) {
@@ -77,36 +76,30 @@ if (document.querySelector('.form__number-wrap--js')) {
     plus.addEventListener('click', function () {
       if (!input.value) return input.value = input.min;
       var value = +input.value + +input.getAttribute('step');
-
       if (value >= +input.max) {
         return input.value = input.max;
       }
-
       input.value = value;
     });
     minus.addEventListener('click', function () {
       if (!input.value) return input.value = input.min;
       var value = +input.value - +input.getAttribute('step');
-
       if (value <= +input.min) {
         return input.value = input.min;
       }
-
       input.value = value;
     });
   });
-} // social
+}
 
-
+// social
 if (document.querySelector('.form__social--js')) {
   var wrap = document.querySelector('.form__social--js');
   var select = wrap.querySelector('select');
   var allInput = wrap.querySelectorAll('input');
-
   for (var _i = 0; allInput.length > _i; _i++) {
     allInput[_i].setAttribute('tabindex', -1);
   }
-
   var activeInput = wrap.querySelector("input[name=\"".concat(select.value, "\"]"));
   activeInput.classList.add('form__social-input--active');
   activeInput.setAttribute('tabindex', 0);
@@ -117,8 +110,9 @@ if (document.querySelector('.form__social--js')) {
     activeInput.classList.add('form__social-input--active');
     activeInput.setAttribute('tabindex', 0);
   });
-} // accordion summary
+}
 
+// accordion summary
 
 if (document.querySelector('.accordion')) {
   (function () {
@@ -134,7 +128,6 @@ if (document.querySelector('.accordion')) {
         accordion.classList.add('accordion--hidde');
       }, transitionDelay);
     };
-
     var accordionOpen = function accordionOpen(accordion) {
       var toggleButton = accordion.querySelector('.accordion__toggle');
       var closeButton = accordion.querySelector('.accordion__close');
@@ -150,25 +143,23 @@ if (document.querySelector('.accordion')) {
       closeButton.addEventListener('click', function () {
         accordionClose(accordion);
       });
-
       if (accordion.querySelectorAll('img.video__media')) {
         accordion.querySelectorAll('.video').forEach(function (elem) {
           loaderVideo(elem);
         });
       }
     };
-
     // ролучаем все спойлеры
-    var arraccordion = document.querySelectorAll('.accordion'); // перебираем все спойлееры для получения необходимых элементов и прослушивания событий
 
+    var arraccordion = document.querySelectorAll('.accordion');
+
+    // перебираем все спойлееры для получения необходимых элементов и прослушивания событий
     var _loop = function _loop(_i2) {
       // кнопка +/-
       var toggleButton = arraccordion[_i2].querySelector('.accordion__toggle');
-
       if (toggleButton.getAttribute('aria-expanded') == 'false') {
         accordionClose(arraccordion[_i2]);
       }
-
       toggleButton.addEventListener('click', function () {
         if (toggleButton.getAttribute('aria-expanded') == 'false') {
           accordionOpen(arraccordion[_i2]);
@@ -177,17 +168,16 @@ if (document.querySelector('.accordion')) {
         }
       });
     };
-
     for (var _i2 = 0; _i2 < arraccordion.length; _i2++) {
       _loop(_i2);
     }
   })();
-} // loader video
+}
 
+// loader video
 
 function loaderVideo(video) {
   var videoLink = video.querySelector('.video__link');
-
   if (!video.querySelector('iframe.video__media')) {
     var iframe = document.createElement('iframe');
     iframe.setAttribute('allowfullscreen', '');
@@ -196,8 +186,9 @@ function loaderVideo(video) {
     iframe.classList.add('video__media');
     video.append(iframe);
   }
-} // tab__label--js
+}
 
+// tab__label--js
 
 if (document.querySelector('.tab__label--js')) {
   var tabLabel = document.querySelectorAll('.tab__label--js');
@@ -214,7 +205,6 @@ if (document.querySelector('.tab__label--js')) {
     });
   });
 }
-
 window.addEventListener('load', function () {
   var tabWrapLabel = document.querySelector('.tab__wrap-label');
   var courceWrapLevel = document.querySelector('.cource-wrap-level');
@@ -224,49 +214,41 @@ window.addEventListener('load', function () {
       smoothScroll(courceWrapLevel);
     }
   });
-
   function currentYPosition() {
-    console.log('currentYPosition'); // Firefox, Chrome, Opera, Safari
-
-    if (self.pageYOffset) return self.pageYOffset; // Internet Explorer 6 - standards mode
-
-    if (document.documentElement && document.documentElement.scrollTop) return document.documentElement.scrollTop; // Internet Explorer 6, 7 and 8
-
+    console.log('currentYPosition');
+    // Firefox, Chrome, Opera, Safari
+    if (self.pageYOffset) return self.pageYOffset;
+    // Internet Explorer 6 - standards mode
+    if (document.documentElement && document.documentElement.scrollTop) return document.documentElement.scrollTop;
+    // Internet Explorer 6, 7 and 8
     if (document.body.scrollTop) return document.body.scrollTop;
     return 0;
   }
-
   function elmYPosition(courceWrapLevel) {
     console.log('elmYPosition');
     var elm = courceWrapLevel;
     var y = elm.offsetTop;
     var node = elm;
-
     while (node.offsetParent && node.offsetParent != document.body) {
       node = node.offsetParent;
       y += node.offsetTop;
     }
-
     return y;
   }
-
   function smoothScroll(courceWrapLevel) {
     console.log('smoothScroll');
     var startY = currentYPosition();
     var stopY = elmYPosition(courceWrapLevel);
     var distance = stopY > startY ? stopY - startY : startY - stopY;
-
     if (distance < 100) {
       scrollTo(0, stopY);
       return;
     }
-
     var speed = Math.round(distance / 100);
     if (speed >= 20) speed = 20;
     var step = Math.round(distance / 25);
     var leapY = stopY > startY ? startY + step : startY - step;
     var timer = 0;
-
     if (stopY > startY) {
       for (var i = startY; i < stopY; i += step) {
         setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
@@ -274,10 +256,8 @@ window.addEventListener('load', function () {
         if (leapY > stopY) leapY = stopY;
         timer++;
       }
-
       return;
     }
-
     for (var i = startY; i > stopY; i -= step) {
       setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
       leapY -= step;
